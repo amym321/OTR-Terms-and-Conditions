@@ -1,0 +1,17 @@
+<!-- /templates/article.liquid -->
+{% comment %}
+  The contents of the article.liquid template can be found in /sections/article-template.liquid
+{% endcomment %}
+<!--<a href="/products/otr-diagnostics-professional-package"><img style="padding-bottom: 20px" src="https://cdn.shopify.com/s/files/1/2628/2624/files/Group_25_2.svg?v=1640735136" class="desktop"></a>
+<a href="/products/otr-diagnostics-professional-package"><img style="padding-bottom: 20px" src="https://cdn.shopify.com/s/files/1/2628/2624/files/Group_25_3.svg?v=1640735136" class="mobile"></a>-->
+<form action="{{ routes.search_url }}" method="get" class="input-group search-bar {{ search_bar_location }}" role="search">
+  {% comment %}<input type="hidden" name="type" value="product">{% endcomment %}
+  <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search Topic" class="input-group-field" aria-label="{{ 'general.search.placeholder' | t }}">
+  <span class="input-group-btn">
+    <button type="submit" class="{{ search_btn_style }} icon-fallback-text">
+      <span class="icon icon-search" aria-hidden="true"></span>
+      <span class="fallback-text">{{ 'general.search.submit' | t }}</span>
+    </button>
+  </span>
+</form>
+{% section 'faq-template' %}

@@ -1,0 +1,102 @@
+<div class="additional-products-with-variants">
+	{% for product in products %}
+		{% if tags contains product.tag and product.product %}
+		<p>reached</p>
+  	{% assign productRef = all_products[product.product] %}
+  	{% assign hasProduct = true %}
+
+    {% if hasProduct %}
+  <div class="additional-products--checkbox">
+          <input type="radio" name="addition-product" class="additional_product_checkbox" id="additional_none" checked />
+          <label for="additional_none">Subscription Only</label>
+  </div>
+  {% endif %}
+
+  		<div class="additional-products--checkbox">
+          <input name="addition-product" type="radio" class="additional_product_checkbox" id="additional_{{productRef.handle}}" />
+          <label for="additional_{{productRef.handle}}">{{ product.name }}</label>
+  		</div>
+  		<div class="additional-products--variants hidden shirt" data-product="additional_{{productRef.handle}}">
+          {% unless productRef.has_only_default_variant %}
+                {% for option in productRef.options_with_values %}
+                  <div class="radio-wrapper shirt js product-form__item">
+                    <label class="single-option-radio__label"
+                      for="ProductSelect-option-{{ forloop.index0 }}">
+                      {{ option.name | escape }}
+                    </label>
+                    {% if section.settings.product_selector == 'radio' %}
+                      <fieldset class="single-option-radio"
+                        id="ProductSelect-option-{{ forloop.index0 }}">
+                        {% assign option_index = forloop.index %}
+                        {% for value in option.values %}
+                          {% assign variant_label_state = true %}
+                          {% if productRef.options.size == 1 %}
+                            {% unless productRef.variants[forloop.index0].available  %}
+                              {% assign variant_label_state = false %}
+                            {% endunless %}
+                          {% endif %}
+                          <input type="radio"
+                            {% if option.selected_value == value %} checked="checked"{% endif %}
+                            {% unless variant_label_state %} disabled="disabled"{% endunless %}
+                            value="{{ value | escape }}"
+                            data-index="option{{ option_index }}"
+                            name="option{{ option.position }}"
+                            class="single-option-selector__radio{% unless variant_label_state %} disabled{% endunless %}"
+                            id="ProductSelect-option-{{ option.name | handleize }}-{{ value | escape }}">
+                          <label for="ProductSelect-option-{{ option.name | handleize }}-{{ value | escape }}"{% unless variant_label_state %} class="disabled"{% endunless %}>{{ value | escape }}</label>
+                        {% endfor %}
+                      </fieldset>
+                    {% else %}
+                      <select class="single-option-selector__radio single-option-selector-{{ section.id }} product-form__input" id="SingleOptionSelector-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
+                        {% for value in option.values %}
+                          <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value | escape }}</option>
+                        {% endfor %}
+                      </select>
+                    {% endif %}
+                  </div>
+                {% endfor %}
+              {% endunless %}
+
+              <select name="id" data-productid="{{ productRef.id }}" data-product="additional_{{productRef.handle}}" id="ProductSelect" class="product-single__variants no-js">
+                {% for variant in productRef.variants %}
+                  {% if variant.available %}
+                    <option 
+                      data-sku="{{ variant.sku }}"
+                      value="{{ variant.id }}">
+                      {{ variant.title }} - <span class="money" data-product-id="{{ productRef.id }}">{{ variant.price | money_with_currency }}</span>
+                    </option>
+                  {% else %}
+                    <option disabled="disabled">
+                      {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                    </option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+  		</div>
+  	{% endif %}
+  	{% endfor %}
+
+<!--   {% if hasProduct %}
+  <div class="aditional-products--checkbox">
+          <input type="radio" name="addition-product" class="additional_product_checkbox" id="additional_none" checked />
+          <label for="additional_none">Subscription only</label>
+  </div>
+  {% endif %} -->
+
+</div>
+
+<script>
+  document.querySelector("shirt").addEventListener("change", e => {
+    console.log('[HC] TEST');
+    const target = e.target.matches("[name='addition-product']");
+		console.log(e.target);
+    if (target) {
+      const id = document.querySelector(`[name="addition-product"]:checked`).getAttribute('id');
+      const container = document.querySelector(`[data-product="${id}"]`);
+      const containers = document.querySelectorAll(`.additional-products--variants:not([data-product="${id}"])`);
+      console.log('[HC] TEST 2', id, container);
+	  container && container.classList.remove('hidden');
+      containers.forEach(el => el.classList.add('hidden'));
+    }
+  })
+</script>

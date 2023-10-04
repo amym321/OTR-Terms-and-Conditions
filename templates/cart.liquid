@@ -1,0 +1,586 @@
+{% comment %} variables for RTBUNDLE - am {% endcomment %}
+{% assign rtbundle_qualify = false %}
+{% assign rtbundle_discount2 =  0 %}
+{% assign rtbundle_value =  0 %}
+{% assign diagnostics_in_cart = false %}
+{% assign rtbundle_lines_total = 0 %}
+{% assign rtbundle_cart_discount =  0 %}
+
+
+<!-- HC - Remove Physical Product if a Subscription is removed in the car - 04 May 22 -->
+<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+{% comment %}
+
+  For info on test orders:
+    - General http://docs.shopify.com/manual/your-store/orders/test-orders
+    - Shopify Payments - http://docs.shopify.com/manual/more/shopify-payments/testing-shopify-payments
+
+{% endcomment %}
+<div class="grid">
+  <div class="grid__item large--five-sixths push--large--one-twelfth">
+    {% if cart.item_count > 0 %}
+      <header class="section-header text-center">
+        <h1 class="text-center">{{ 'cart.general.title' | t }}</h1>
+
+        <hr class="hr--small">
+      </header>
+    
+    <div id="hc-quantity-error" class="hide">
+      <p>Note: Please contact us at <strong>(586) 799-4375</strong> to purchase more than one diagnostic package.</p>
+    </div>
+
+      <form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
+
+        <div class="cart__row medium-down--hide cart__header-labels">
+          <div class="grid--full">
+            <div class="grid__item large--two-fifths push--large--three-fifths">
+              <div class="grid--full">
+                <div class="grid__item one-third medium-down--half text-center">
+                  {{ 'cart.label.quantity' | t }}
+                </div>
+                <div class="grid__item two-thirds medium-down--half text-right">
+                  {{ 'cart.label.total' | t }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% comment %}
+          Loop through products in the cart
+        {% endcomment %}
+        {% for item in cart.items %}
+
+        {% comment %} determine whether RTBUNDLE discount is passed to checkout - am {% endcomment %}
+        {% assign new_cart_total = cart.total_price %}
+
+        {% if settings.rtbundle_display == true %}
+          {% if item.product.title contains 'Reset Tool' or item.product.title contains 'reset tool' %}
+            {% assign rtbundle_discount2 = rtbundle_discount2 | plus: item.quantity %}
+            {% assign rtbundle_lines_total = rtbundle_lines_total | plus: item.final_line_price %}
+            {% if rtbundle_discount2 >= 2 %}
+              {% assign rtbundle_qualify = true %}
+              {% if rtbundle_discount2 == 2 %}
+                {% assign rtbundle_value = 5 %}
+              {% elsif rtbundle_discount2 == 3 or rtbundle_discount2 == 4 %}
+                {% assign rtbundle_value = 7 %}
+              {% elsif rtbundle_discount2 > 4 %}
+                {% assign rtbundle_value = 10 %}
+              {% endif  %}
+            {% endif  %}
+
+          {% endif  %}
+        {% endif  %}
+
+        {% comment %} set flag if cart contains Diagnotics product - am  {% endcomment %}
+        {% if item.product.title contains 'Diagnostics' or item.product.title contains 'diagnostics' %}
+          {% assign diagnostics_in_cart = true %}
+        {% endif  %}
+
+          <div class="cart__row">
+            <div class="grid--full cart__row--table-large">
+
+              <div class="grid__item large--three-fifths">
+                <div class="grid">
+
+                  <div class="grid__item one-third">
+                    <a href="{{ item.url | within: collections.all }}" class="cart__image">
+
+                      {% comment %}
+                        More image size options at:
+                          - http://docs.shopify.com/themes/filters/product-img-url
+                      {% endcomment %}
+                      <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
+                    </a>
+                  </div>
+
+                  <div class="grid__item two-thirds">
+                    <a href="{{ item.url }}" class="h4 cart__product-name">
+                      {{ item.product.title }}
+                    </a>
+                    {% unless item.variant.title contains 'Default' %}
+                      <p class="cart__product-meta">
+                        {{ item.variant.title }}
+                      </p>
+                    {% endunless %}
+
+                    {% if settings.product_vendor_enable %}
+                      <p class="cart__product-meta">{{ item.vendor }}</p>
+                    {% endif %}
+
+                    {% assign property_size = item.properties | size %}
+                    {% if property_size > 0 %}
+                      {% for p in item.properties %}
+{%- if p.first.first == '_' -%}{%- continue -%}{%- endif -%}
+                        {% assign first_character_in_key = p.first | truncate: 1, '' %}
+                        {% unless p.last == blank or p.first == "subscription_id" or p.first == "shipping_interval_frequency" or p.first == "shipping_interval_unit_type" or first_character_in_key == '_' %}
+                          {{ p.first }}:
+
+                          {% if p.last contains '/uploads/' %}
+                            <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                          {% else %}
+                            {{ p.last }}
+                          {% endif %}
+
+                          <br>
+                        {% endunless %}
+                      {% endfor %}
+                    {% endif %}
+
+                    <p class="cart__product-meta">
+                      
+                      {% assign isDiagnosticsPackage = false %}
+                      {% assign isSubscription = false %}
+                      {% for collection in item.product.collections %}
+                        {% if collection.handle contains 'diagnostic-packages' %}
+                          {% assign isDiagnosticsPackage = true %}
+                          {% break %}
+                        {% endif %}
+                      {% endfor %}
+                      
+                      {% if item.product.tags contains 'Subscription' %}
+                        {% assign isSubscription = true %}
+                      {% endif %}
+                      
+                    <div class="hc-remove-product" 
+                         style="cursor: pointer;"
+                         x-data="{ variantId: {{item.variant_id}}, type: '{% if isDiagnosticsPackage %}Dx Bundle{% elsif isSubscription %}Subscription{% else %}other{% endif %}' }"
+                         @click="removeProduct(variantId, type, {})"
+                         >
+                      {{ 'cart.general.remove' | t }}
+                    </div>
+                      {% comment %}
+                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0">
+                        {{ 'cart.general.remove' | t }}
+                      </a>
+                      {% endcomment %}
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="grid__item large--two-fifths cart__pricing">
+                <div class="grid--full cart__row--table{% if item.line_level_discount_allocations != blank %} cart__row--table-with-discount{% endif %}">
+
+                  <!-- HC Remove Physical Product if a Subscription is removed in the cart - 04 May 22 -->
+                  <div  id="qty-selector--{{ item.variant_id }}"
+                       class="qty-selector grid__item one-third text-center"
+                       x-data="{ 
+                                 value: {{item.quantity}}, 
+                                 variantId: {{ item.variant_id }},
+                                 productType: '{% if isDiagnosticsPackage %}Dx Bundle{% elsif isSubscription %}Subscription{% else %}other{% endif %}'
+                               }"
+                       >
+
+                    <div class="native-qty-selector visually-hidden">
+                      <label for="updates_{{ item.key }}">{{ 'cart.label.quantity' | t }}</label>
+                      <input type="number" name="updates[]" id="updates_{{ item.key }}"
+                             class="cart__product-qty" 
+                             min="0"
+                             value="{{item.quantity}}"
+                             >
+                    </div>
+
+                    <div class="custom-qty-selector">
+                      {%- comment -%} Already in cart logic for Dx - am {%- endcomment -%}
+                      {% if item.product.type contains "Dx Bundle" or item.product.type contains "Subscription" %}
+                        <div class="qty-item qty-minus"
+                          x-data="{ variantId: {{item.variant_id}}, type: '{% if isDiagnosticsPackage %}Dx Bundle{% elsif isSubscription %}Subscription{% else %}other{% endif %}' }"
+                          @click="removeProduct(variantId, type, {})">-</div>
+                      {% else %}
+                        {% comment %} limit 1 promo t-shirt - am {% endcomment %}
+                        {% if item.product.type contains 'Apparel free promo' %}
+                          <div class="qty-item qty-minus"></div>
+                        {% else %}
+                          <div class="qty-item qty-minus"  @click.debounce="syncQuantities($data.productType, $data.variantId, 'minus')">-</div>
+                        {% endif %}
+
+                      {% endif %}
+                      <div class="qty-item qty-value">{{ item.quantity }}</div>
+                      
+                      {% comment %} limit 1 promo t-shirt - am {% endcomment %}
+                      {% if item.product.type contains 'Apparel free promo' %}
+                        <div class="qty-item qty-plus" ></div>
+                      {% else %}
+                        <div class="qty-item qty-plus" @click.debounce="syncQuantities($data.productType, $data.variantId, 'plus')">+</div>
+                      {% endif %}
+
+                    </div>
+                    
+                  </div>
+
+                  <div class="grid__item two-thirds text-right">
+
+                    {% comment %} line item discount {% endcomment %}
+                    {%- if item.original_line_price != item.final_line_price -%}
+                      <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                      <del class="cart__price">
+                        <div class="un-line-item-total" data-id="{{ item.key }}">
+                          <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span>
+                          <div class="un-line-item-total" data-id="{{ item.key }}">
+                            <span class="Makebecool-theme-hook-DO-NOT-DELETE makebecool_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span>
+                            {{ item.original_line_price | money }}
+                          </div>
+                        </div>
+                      </del>
+                      <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                      <span class="order-discount cart__price">
+                        <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total_3" data-item-key="{{item.key}}" style="display:none !important;"></span>
+                        <span class="Makebecool-theme-hook-DO-NOT-DELETE makebecool_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span>
+                          {{ item.final_line_price | money }}
+                      </span>
+                    {% comment %} NO line item discount {% endcomment %}
+                    {%- else -%}
+                      <span class="cart__price">
+                        <div class="un-line-item-total" data-id="{{ item.key }}">
+                          <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total_2" data-item-key="{{item.key}}" style="display:none !important;"></span>
+                          <div class="un-line-item-total" data-id="{{ item.key }}">
+                            <span class="Makebecool-theme-hook-DO-NOT-DELETE makebecool_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span>
+                            {% comment %} regular item  price {% endcomment %}
+                            {{ item.original_line_price | money }}
+                          </div>
+                        </div>
+                      </span>
+                    {%- endif -%}
+
+                    {%- if item.unit_price_measurement -%}
+                      <span class="visually-hidden">{{ 'products.general.unit_price' | t }}</span>
+                      <span class="cart__unit-price">
+                        {%- capture unit_price_separator -%}
+                          <span aria-hidden="true">/</span><span class="visually-hidden">
+                            &nbsp;{{ 'general.accessibility.unit_price_separator' | t }}&nbsp;
+                          </span>
+                        {%- endcapture -%}
+                        {%- capture unit_price_base_unit -%}
+                          {%- if item.unit_price_measurement.reference_value != 1 -%}
+                            {{- item.unit_price_measurement.reference_value -}}
+                          {%- endif -%}
+                          {{ item.unit_price_measurement.reference_unit }}
+                        {%- endcapture -%}
+
+                        <span data-unit-price> 
+                          {{ item.unit_price | money }}
+                        </span>
+                        {{- unit_price_separator -}}{{- unit_price_base_unit -}}
+                      </span>
+                    {%- endif -%}
+
+                    {% comment %} display the line item dicount details {% endcomment %}
+                    {%- if item.line_level_discount_allocations != blank -%}
+                      <ul class="order-discount order-discount--list order-discount--title order-discount--cart-list" aria-label="{{ 'customer.order.discount' | t }}">
+                        {%- for discount_allocation in item.line_level_discount_allocations -%}
+                          <li class="order-discount__item">
+                            <span class="icon icon-saletag" aria-hidden="true"></span>
+                              {{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        {% endfor %}
+
+        <div class="cart__row cart__row--last">
+          <div class="grid--full cart__row--table-large">
+            {%- comment -%}
+              Optional, add a textarea for special notes
+                - Your theme settings can turn this on or off. Default is on.
+                - Make sure you have name="note" for the message to be submitted properly
+            {%- endcomment -%}
+            {% if settings.cart_notes_enable %}
+            <div class="grid__item large--seven-twelfths cart__note-container">
+
+              {% comment %} note for RTBUNDLE discount - am {% endcomment %}
+              {% if rtbundle_qualify == true and settings.rtbundle_display == true %}
+                <div class="cart__note" style="padding-bottom:10px;">
+                  <label style="margin-bottom: unset">You qualified for a <b>{{ rtbundle_value }}% discount </b>on your OTR Reset Tools!</label>
+                </div>
+                <br>
+              {% endif %}
+
+              <div class="cart__note">
+                <label for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
+                <textarea name="note" class="input-full" id="CartSpecialInstructions">{{ cart.note }}</textarea>
+              </div>
+            </div>
+            {% endif %}
+
+            <div class="grid__item large--five-twelfths text-center large--text-right{% if settings.cart_notes_enable %} cart__subtotal-container{% else %} push--large--seven-twelfths{% endif %}">
+              {%- if cart.cart_level_discount_applications != blank -%}
+              <div class="grid--full cart__row--table">
+                <div class="cart__discounts">
+                  {%- for discount_application in cart.cart_level_discount_applications -%}
+                    <span class="order-discount order-discount--title order-discount--cart">
+                      <span class="icon icon-saletag" aria-hidden="true"></span>
+                      <span class="visually-hidden">{{ 'customer.order.discount' | t }}:</span>
+                      {{- discount_application.title -}}
+                    </span>
+                    <span class="order-discount order-discount--cart">
+                      -{{ discount_application.total_allocated_amount | money }}
+                    </span>
+                  {%- endfor -%}
+                </div>
+              </div>
+              {%- endif -%}
+
+              {% if settings.rtbundle_display == true %}
+                {% comment %} cart total adjusted if RTBUNDLE applies - am {% endcomment %}
+                {% if rtbundle_qualify == true %}
+                  {% if rtbundle_value == 5 %}
+                    {% assign rtbundle_cart_discount = rtbundle_lines_total | divided_by: 20 %}
+                  {% elsif rtbundle_value == 7 %}
+                    {% assign rtbundle_cart_discount = rtbundle_lines_total | divided_by: 14.2857 %}
+                  {% elsif rtbundle_value == 10 %}
+                    {% assign rtbundle_cart_discount = rtbundle_lines_total | divided_by: 10 %}
+                  {% endif %}
+                  {% assign new_cart_total = cart.total_price | minus: rtbundle_cart_discount %}
+                {% endif %}
+                {% comment %} display RTBUNDLE dicsount - am {% endcomment %}
+                <div class="grid--full cart__row--table">
+                  <div class="cart__discounts">
+                    {%- if rtbundle_qualify == true -%}
+                      <span class="order-discount order-discount--title order-discount--cart">
+                        <span class="icon icon-saletag" aria-hidden="true"></span>
+                        <span class="visually-hidden">{{ 'customer.order.discount' | t }}:</span>
+                        RTBUNDLE {{rtbundle_value}}%
+                      </span>
+                      <span class="order-discount order-discount--cart">
+                        -{{ rtbundle_cart_discount | money }}
+                      </span>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {% endif %}
+
+              <div class="grid--full cart__row--table">
+                <div class="grid__item one-half large--two-thirds large--text-center">
+                  <p class="cart__subtotal">
+                    {{ 'cart.general.subtotal' | t }}</p>
+                </div>
+                <div class="grid__item one-half large--one-third">
+                  <p class="cart__subtotal">
+                    <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>
+                    <span class="Makebecool-theme-hook-DO-NOT-DELETE makebecool_cart_total" style="display:none !important;"></span>
+                    {% if rtbundle_qualify == true and settings.rtbundle_display == true %}
+                      {{ new_cart_total | money }}
+                    {% else %}
+                      {{ cart.total_price | money }}
+                    {% endif %}
+                    </p>
+                </div>
+
+              </div>
+
+              {%- capture taxes_shipping_checkout -%}
+                {%- if shop.taxes_included and shop.shipping_policy.body != blank -%}
+                  {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                {%- elsif shop.taxes_included -%}
+                  {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
+                {%- elsif shop.shipping_policy.body != blank -%}
+                  {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+                {%- else -%}
+                  {{ 'cart.general.taxes_and_shipping_at_checkout' | t }}
+                {%- endif -%}
+              {%- endcapture -%}
+
+              <p class="rte"><em>{{ taxes_shipping_checkout }}</em></p>
+              <button type="submit" name="update" class="btn--secondary update-cart" style="background-color: #fff; color: #000;">
+                {{ 'cart.general.update' | t }}
+              </button>
+              
+
+              {% comment %} <button type="submit" name="checkout" class="btn cart__checkout">
+                1 {{ 'cart.general.checkout' | t }} <span class="icon icon-arrow-right" aria-hidden="true"></span>
+              </button> {% endcomment %}
+
+
+              {% comment %} checkout button with discount passed - am {% endcomment %}
+              {% if rtbundle_qualify == true and diagnostics_in_cart == false and settings.rtbundle_display == true %}
+                {% if rtbundle_value == 5 %}
+                  <a class="btn" href="https://otrperformance.com/discount/RTBUNDLE5?redirect=/checkout/">
+                    {{ 'cart.general.checkout' | t }} <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                  </a>
+                {% elsif rtbundle_value == 7 %}
+                  <a class="btn" href="https://otrperformance.com/discount/RTBUNDLE7?redirect=/checkout/">
+                    {{ 'cart.general.checkout' | t }} <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                  </a>
+                {% elsif rtbundle_value == 10 %}
+                  <a class="btn" href="https://otrperformance.com/discount/RTBUNDLE10?redirect=/checkout/">
+                    {{ 'cart.general.checkout' | t }} <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                  </a>
+                {% endif %}
+              {% else %}
+                <button type="submit" name="checkout" class="btn cart__checkout">
+                  {{ 'cart.general.checkout' | t }} <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                </button>
+              {% endif %} 
+            </div>
+        </div>
+
+      </form>
+
+    {% else %}
+      {% comment %}
+        The cart is empty
+      {% endcomment %}
+      <header class="section-header text-center">
+        <h1 class="text-center">{{ 'cart.general.title' | t }}</h1>
+        <hr class="hr--small">
+        <p class="cart--empty-message">{{ 'cart.general.empty' | t }}</p>
+        <p class="cart--continue-browsing">{{ 'cart.general.continue_browsing_html' | t: link: routes.collections_url }}</p>
+        <p class="cookie-message">{{ 'cart.general.cookies_required' | t }}</p>
+      </header>
+
+    {% endif %}
+  </div>
+</div>
+
+{% comment %} set global variable for Recharge cart to add RTBUNDLE discount - am {% endcomment %}
+{% if settings.rtbundle_display == true %}
+  <script>
+    var rtbundleValue  = {{ rtbundle_value  | default: 0 }} ;
+
+    if (rtbundleValue > 0) {
+      console.log('log 10) rtbundleValue = '+ rtbundleValue );
+    } else {
+      console.log('log 11) rtbundleValue = '+ rtbundleValue );
+    };
+  </script>
+{% endif  %}
+
+
+<!-- Begin ReCharge code -->
+{% include 'subscription-cart-footer' %}
+<!-- End ReCharge code -->
+<!-- /templates/cart.liquid -->
+
+
+<!-- HC - Remove Physical Product if a Subscription is removed in the car - 04 May 22 -->
+  <script>
+    const cart = {{ cart | json }};
+    const product = {
+      diagnostics: cart.items.filter(item => item.product_type === 'Dx Bundle'),
+      subscriptions: cart.items.filter(item => item.product_type === 'Subscription')
+    }
+    
+    const $error = document.querySelector('#hc-quantity-error');
+    
+    function syncQuantities(productType, variantId, action) {
+      
+      if(productType === 'Dx Bundle' || productType === 'Subscription') {
+        $error.classList.remove('hide')
+        return;
+      }
+      
+      const qtySelector = { 
+        /*target: {
+          native: document.querySelector(`#qty-selector--${target.variant_id} .cart__product-qty`), 
+          custom: document.querySelector(`#qty-selector--${target.variant_id} .qty-value`) 
+        },*/
+        self: {
+          native: document.querySelector(`#qty-selector--${variantId} .cart__product-qty`), 
+          custom: document.querySelector(`#qty-selector--${variantId} .qty-value`) 
+        }
+      }
+      
+      if(action === 'plus') {
+        //qtySelector.target.native.value++;
+        qtySelector.self.native.value++;
+      } else {
+        //qtySelector.target.native.value === "0" ? "0" : qtySelector.target.native.value--;
+        qtySelector.self.native.value === "0" ? "0" : qtySelector.self.native.value--;
+      }
+
+      //qtySelector.target.custom.innerText = qtySelector.target.native.value;
+      qtySelector.self.custom.innerText = qtySelector.self.native.value;
+      
+      /*
+      if(productType === 'other' || product.diagnostics.length === 0 || product.subscriptions.length === 0) {
+        return;
+      }
+      
+      const target = productType === 'Dx Bundle' ? product.subscriptions[0] : product.diagnostics[0];
+
+      const qtySelector = { 
+        target: {
+          native: document.querySelector(`#qty-selector--${target.variant_id} .cart__product-qty`), 
+          custom: document.querySelector(`#qty-selector--${target.variant_id} .qty-value`) 
+        },
+        self: {
+          native: document.querySelector(`#qty-selector--${variantId} .cart__product-qty`), 
+          custom: document.querySelector(`#qty-selector--${variantId} .qty-value`) 
+        }
+      }
+      
+      if(action === 'plus') {
+        qtySelector.target.native.value++;
+        qtySelector.self.native.value++;
+      } else if( qtySelector.target.native.value !== "0") {
+        qtySelector.target.native.value === "0" ? "0" : qtySelector.target.native.value--;
+        qtySelector.self.native.value === "0" ? "0" : qtySelector.self.native.value--;
+      }
+
+      qtySelector.target.custom.innerText = qtySelector.target.native.value;
+      qtySelector.self.custom.innerText = qtySelector.self.native.value;
+      */
+    }
+     
+    function removeProduct(variantId, productType, data) {
+      data[variantId] = 0;
+      switch (productType) {
+        case 'Subscription':
+          data = {
+            ...product.diagnostics.reduce((acc, item) => { acc[item.key] = 0; return acc }, {}), 
+          	...data
+      	  };
+      	  break;
+        case 'Dx Bundle':
+          let diagnostic = product.diagnostics.find(item => item.variant_id === parseInt(variantId)); //get specific diagnostic product
+          data = {
+            ...product.subscriptions.reduce((acc, item) => { acc[item.key] = item.quantity - diagnostic.quantity; return acc }, {}),
+            ...data
+    	  };
+          break;
+        default:
+
+        break;
+      }
+      
+      updateCart(data)
+    }
+    
+    /* Update Cart (Remove products mainly) and then reload page */
+    function updateCart(data) {
+      const settings =  {
+        method: "post",
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ updates: data })
+      }
+      fetch('/cart/update.js', settings).then(response => response.json())
+      .then(cart => {
+        window.location.reload();
+      })
+      .catch(console.error)
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {      
+      /* If Subscriptions are present in the cart, but no Diagnostics product is present; Remove Subscriptions */
+      if(product.diagnostics.length <= 0 && product.subscriptions.length > 0) {
+        updateCart(product.subscriptions.reduce((acc, item) => { acc[item.key] = 0; return acc }, {}));
+      } 
+      
+      if(product.diagnostics.length > 0 && product.subscriptions.length <= 0) {
+        updateCart(product.diagnostics.reduce((acc, item) => { acc[item.key] = 0; return acc }, {}));
+      } 
+    })
+  </script>

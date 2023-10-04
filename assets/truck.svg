@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="truck" horiz-adv-x="1000" >
+<font-face font-family="truck" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="small-truck" unicode="&#xe800;" d="M992 232h-33c7-10 12-21 14-34h19c18 27 0 34 0 34z m-177 0h-206v16l47 3v221c0 0-15 76-16 109-1 32-54 19-54 19-235-28-279-126-279-126h-11l-30-37c7-12 13-8 13-8-9-9-28-66-28-66s-119-12-167-13-57-16-57-16v-102c0 0-50-60-14-48 33 11 12 63 80 69 9 3 18 5 28 5 48 0 88-40 88-89 0-3 0-7-1-10h467c10 17 7 39 7 39h118c2 13 7 24 15 34z m-694 9c39 0 72-32 72-72s-33-72-72-72c-40 0-73 33-73 72s33 72 73 72z m817-9c-13 13-31 21-51 21-20 0-38-8-51-21-10-9-16-21-19-34-2-5-3-11-3-17 0-40 33-72 73-72 40 0 72 32 72 72 0 6-1 12-2 17-4 13-10 25-19 34z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

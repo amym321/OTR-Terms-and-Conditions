@@ -1,0 +1,65 @@
+{% for plan in plans %}
+  	{% if tags contains plan.tag %}
+      {% if product.tags contains "plan_pro" %}
+        <label class="hc-plans-heading" style='display: none;'>{{ section.settings.additional_plans }}</label>
+      {% else %}
+        <label class="hc-plans-heading">{{ section.settings.additional_plans }}</label>
+      {% endif %}
+    {% break %}
+    {% endif %}
+{% endfor %}
+{% if product.tags contains "plan_pro" %}
+<div class="hc-additional-plans" style="display: none;">
+  {% for plan in plans %}
+    {% if tags contains plan.tag %}
+
+    <div class="hc-additional-plan"
+         {% for i in (1..2) %}
+         {% assign p = "product_" | append: i %}
+         {% if plan[p] %}
+          data-{{p}}="{{ all_products[plan[p]].first_available_variant.metafields.subscriptions.discount_variant_id }}"
+          {% assign isRecharge = p | append: '_recharge' %}
+          {% if plan[isRecharge] %}
+          data-product{{i}}-is-recharge="true"
+          {% endif %}
+         {% endif %}
+         {% endfor %}
+         data-interval-unit="{{ plan.interval_unit }}"
+         data-interval-frequency="{{ plan.interval_frequency }}"
+         {% if product.tags contains "prologo" %}
+          style='display:none;'
+          {% endif %}
+         >
+      {{ plan.name }}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% else %}
+<div class="hc-additional-plans">
+  {% for plan in plans %}
+    {% if tags contains plan.tag %}
+
+    <div class="hc-additional-plan"
+         {% for i in (1..2) %}
+         {% assign p = "product_" | append: i %}
+         {% if plan[p] %}
+          data-{{p}}="{{ all_products[plan[p]].first_available_variant.metafields.subscriptions.discount_variant_id }}"
+          {% assign isRecharge = p | append: '_recharge' %}
+          {% if plan[isRecharge] %}
+          data-product{{i}}-is-recharge="true"
+          {% endif %}
+         {% endif %}
+         {% endfor %}
+         data-interval-unit="{{ plan.interval_unit }}"
+         data-interval-frequency="{{ plan.interval_frequency }}"
+         {% if product.tags contains "prologo" %}
+          style='display:none;'
+          {% endif %}
+         >
+      {{ plan.name }}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endif %}

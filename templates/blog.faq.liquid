@@ -1,0 +1,114 @@
+<!-- /templates/blog.liquid -->
+{% paginate blog.articles by 9 %}
+<!--<a href="/products/otr-diagnostics-professional-package"><img style="padding-bottom: 20px" src="https://cdn.shopify.com/s/files/1/2628/2624/files/Group_25_2.svg?v=1640735136" class="desktop"></a>
+<a href="/products/otr-diagnostics-professional-package"><img style="padding-bottom: 20px" src="https://cdn.shopify.com/s/files/1/2628/2624/files/Group_25_3.svg?v=1640735136" class="mobile"></a>-->
+<style>
+  a:hover{
+   	color: #339933;
+  }
+</style>
+<div class="container">
+
+  <div class="row">
+
+	<div class="col-sm-12 mb-4">
+      <header class="section-header text-center mb-0">
+        <h4>
+          {% if current_tags %}
+            {{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}
+          {% else %}
+            {{ blog.title }}
+          {% endif %}
+          <a href="{{ shop.url }}{{ blog.url }}.atom" class="icon-fallback-text rss-link">
+            <span class="icon icon-rss" aria-hidden="true"></span>
+            <span class="fallback-text">RSS</span>
+          </a>
+        </h4>
+        <hr class="hr--small">
+      </header>
+
+      {% unless search_btn_style %}
+          {% assign search_btn_style = 'btn--secondary' %}
+      {% endunless %}
+
+      <form action="{{ routes.search_url }}" method="get" class="input-group search-bar {{ search_bar_location }}" role="search">
+        {% comment %}<input type="hidden" name="type" value="product">{% endcomment %}
+        <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search Topic" class="input-group-field" aria-label="{{ 'general.search.placeholder' | t }}">
+        <span class="input-group-btn">
+          <button type="submit" class="{{ search_btn_style }} icon-fallback-text">
+            <span class="icon icon-search" aria-hidden="true"></span>
+            <span class="fallback-text">{{ 'general.search.submit' | t }}</span>
+          </button>
+        </span>
+      </form>
+
+    </div>
+  </div>
+  	<div class="row">
+
+
+      <div class="col-md-4">
+          <div class="m-4"><h5>OTR Diagnostics</h5></div>
+      </div>
+      <div class="col-md-8">
+        <div class="m-4"><a href="/blogs/faq/otr-diagnostics">Can I use my OTR Diagnostics subscription on multiple devices?</a></div>
+        <div class="m-4"><a href="/blogs/faq/otr-diagnostics">Can OTR Diagnostics do parameter changes? ie, speed limiters, cruise limiters</a></div>
+        <div class="m-4"><a href="/blogs/faq/otr-diagnostics">Do I need a paid subscription plan to use OTR Diagnostics?</a></div>
+        <div class="m-4"><a href="/blogs/faq/otr-diagnostics">See All</a></div>
+      </div>
+
+
+	</div>
+  	<hr class="hr-otr">
+  	<div class="row">
+
+
+      <div class="col-md-4">
+          <div class="m-4"><h5>Shipping</h5></div>
+      </div>
+      <div class="col-md-8">
+        <div class="m-4"><a href="/blogs/faq/shipping">Is there free shipping available?</a></div>
+        <div class="m-4"><a href="/blogs/faq/shipping">Do we ship to Canada and Mexico?</a></div>
+        <div class="m-4"><a href="/blogs/faq/shipping">How long does shipping take?</a></div>
+        <div class="m-4"><a href="/blogs/faq/shipping">See All</a></div>
+      </div>
+
+
+	</div>
+  	<hr class="hr-otr">
+  	<div class="row">
+
+
+      <div class="col-md-4">
+          <div class="m-4"><h5>Returns</h5></div>
+      </div>
+      <div class="col-md-8">
+        <div class="m-4"><a href="/blogs/faq/what-is-your-return-policy">What is the return policy?</a></div>
+        <div class="m-4"><a href="/blogs/faq/what-is-your-return-policy">What if I want to process a return after 60 days?</a></div>
+        <div class="m-4"><a href="/blogs/faq/what-is-your-return-policy">How soon will I get my refund?</a></div>
+        <div class="m-4"><a href="/blogs/faq/what-is-your-return-policy">I received a damaged item(s), what do I do?</a></div>
+      </div>
+
+
+	</div>
+  	<hr class="hr-otr">
+  	<div class="row">
+
+
+      <div class="col-md-4">
+          <div class="m-4"><h5>Hours and Location</h5></div>
+      </div>
+      <div class="col-md-8">
+        <div class="m-4"><a href="/blogs/faq/hours-location">What are your normal business hours?</a></div>
+        <div class="m-4"><a href="/blogs/faq/hours-location">Are you open on holidays?</a></div>
+        <div class="m-4"><a href="/blogs/faq/hours-location">Where are you located?</a></div>
+        <div class="m-4"><a href="/blogs/faq/hours-location">How do I contact OTR Performance?</a></div>
+      </div>
+
+
+	</div>
+
+</div>
+
+
+{% endpaginate %}

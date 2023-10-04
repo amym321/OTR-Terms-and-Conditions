@@ -1,0 +1,26 @@
+
+
+<div class="d-flex mt-4 mb-4" >
+  <div class="row" {% if current_variant.inventory_quantity > 0 %} style="display: none; margin: 0 auto;"{% else %}style="margin: 0 auto;"{% endif %} id="soldOutTextBlurb">
+    <div class="col-12">
+      <p class="mt-0" style="font-size: 14px; text-align: center; color: #FF7300;">Unfortunately this item is sold out. If you need an immediate <br>solution{%if product.tags contains "Volvo & Mack"%} for a 2014 and newer{% endif %} we recommend checking out OTR Diagnostics </p>
+      <a
+        {% if product.tags contains "Cummins" %}
+          href="\collections\diagnostic-packages\products\otr-diagnostics-cummins"
+        {% elsif product.tags contains "Detroit Diesel" %}
+          href="\collections\diagnostic-packages\products\otr-diagnostics-detroit-diesel-package"
+        {% elsif product.tags contains "Paccar MX" %}
+          href="\collections\diagnostic-packages\products\otr-diagnostics-paccar-package"
+        {% elsif product.tags contains "Paccar PX" %}
+          href="\collections\diagnostic-packages\products\otr-diagnostics-paccar-px"
+        {% elsif product.tags contains "Volvo & Mack" %}
+            href="\collections\diagnostic-packages\products\otr-diagnostics-volvo-mack-package"
+        {% elsif product.tags contains "Professional" %}
+          href="\collections\diagnostic-packages\products\otr-diagnostics-professional-package"
+        {% else %}
+          href="#"
+        {% endif %}
+        style="background-color: #FF7300; font-size:12px; border-radius: .35rem;" class="btn">Check it out!</a>
+    </div>
+  </div>
+</div>

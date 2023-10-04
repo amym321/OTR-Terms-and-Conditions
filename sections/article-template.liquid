@@ -1,0 +1,364 @@
+<!-- /templates/article.liquid -->
+{% assign number_of_comments = article.comments_count %}
+
+{% if comment and comment.created_at %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<div class="grid">
+  <article class="grid__item large--five-sixths push--large--one-twelfth article" itemscope itemtype="http://schema.org/Article">
+
+    <header class="section-header text-center">
+      <h1>{{ article.title }}</h1>
+      <hr class="hr--small">
+ <!-- <p><span class="date"><time datetime="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}">{{ article.published_at | date: format: 'date' }}</time></span></p>  -->
+    </header>
+
+    <div class="grid">
+      <div class="grid__item large--four-fifths push--large--one-tenth">
+
+        <div class="rte rte--indented-images" itemprop="articleBody">
+       
+{% assign content_parts = article.content | split: '<!-- INSERT_SNIPPET -->' %}
+{{ content_parts[0] }}
+
+{% include 'dx-banner' %}
+
+{{ content_parts[1] }}
+
+            {% include 'related-blogs' %}
+            <!-- {% include 'dx-banner' %} -->
+
+        </div>
+
+        <ul class="tags tags--article inline-list">
+          {% include 'tags-article' %}
+        </ul>
+
+        {% if section.settings.social_sharing_blog %}
+          {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+        {% endif %}
+
+        <hr class="hr--small">
+
+        <!-- START FORMS -->
+
+         <div class="form-vertical">
+           <h3> Leave us your question </h3>
+          {% form 'contact' %}
+
+            {% comment %}
+              Successful message
+            {% endcomment %}
+            {% if form.posted_successfully? %}
+              <p class="note form-success">
+                {{ 'contact.form.post_success' | t }}
+              </p>
+            {% endif %}
+
+            {{ form.errors | default_errors }}
+
+            <div class="grid grid--small">
+              <div class="grid__item large--one-half">
+                <label for="ContactFormName" class="hidden-label">{{ 'contact.form.name' | t }}</label>
+                <input type="text" id="ContactFormName" class="input-full" name="contact[{{ 'contact.form.name' | t }}]" placeholder="{{ 'contact.form.name' | t }}" autocapitalize="words" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
+              </div>
+
+              <div class="grid__item large--one-half">
+                <label for="ContactFormEmail" class="hidden-label">{{ 'contact.form.email' | t }}</label>
+                <input type="email" id="ContactFormEmail" class="input-full" name="contact[email]" placeholder="{{ 'contact.form.email' | t }}" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+              </div>
+
+              <div class="grid__item large--one-half">
+                <label for="ContactFormEngine" class="hidden-label">Engine</label>
+                <input type="text" id="ContactFormEngine" class="input-full" name="contact[Engine]" placeholder="Engine"/>
+              </div>
+
+              <div class="grid__item large--one-half">
+                <label for="ContactFormMake" class="hidden-label">Make</label>
+                <input type="text" id="ContactFormMake" class="input-full" name="contact[Make]" placeholder="Make"/>
+              </div>
+
+            </div>
+
+            <label for="ContactFormPhone" class="hidden-label">{{ 'contact.form.phone' | t }}</label>
+            <input type="tel" id="ContactFormPhone" class="input-full" name="contact[{{ 'contact.form.phone' | t }}]" placeholder="{{ 'contact.form.phone' | t }}" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+
+            <label for="ContactFormMessage" class="hidden-label">{{ 'contact.form.message' | t }}</label>
+            <textarea rows="10" id="ContactFormMessage" class="input-full" name="contact[{{ 'contact.form.message' | t }}]" placeholder="{{ 'contact.form.message' | t }}">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+
+            <input type="submit" class="btn" style="margin: auto;" value="{{ 'contact.form.send' | t }}">
+
+          {% endform %}
+        </div>
+
+
+        <!--START RELATED BLOGS -->
+
+
+{% paginate blog.articles by 4 %}
+
+<div class="mt-2 mb-2">
+
+  <div class="row">
+
+<div class="col-sm-12">
+    <header class="section-header text-center">
+      <h3>
+        {% if current_tags %}
+          {{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}
+        {% else %}
+          Related Blogs
+        {% endif %}
+        <a href="{{ shop.url }}{{ blog.url }}.atom" class="icon-fallback-text rss-link">
+          <span class="icon icon-rss" aria-hidden="true"></span>
+          <span class="fallback-text">RSS</span>
+        </a>
+      </h3>
+
+      <hr class="hr--small">
+
+    </header>
+    </div>
+  </div>
+
+
+  <div class="row">
+    {% for article in blog.articles offset:1 %}
+
+      {% assign article_content = article.excerpt_or_content %}
+
+      <article class="mb-4 article col-md-4 col-sm-12">
+
+{% unless article.image == blank %}
+          <div class="grid__item" style="padding-left: 0;">
+            <a class="article__featured-image-link" href="{{ article.url }}">
+              <noscript>
+                {{ article.image | img_url: '2048x2048' | img_tag: article.title | escape }}
+              </noscript>
+              <div class="article__featured-image-wrapper" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100}}%;">
+                {% assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+                <img class="article__featured-image lazyload"
+                  src="{{ article.image | img_url: '300x300' }}"
+                  data-src="{{ img_url }}"
+                  data-widths="[360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                  data-aspectratio="{{ article.image.aspect_ratio }}"
+                  data-sizes="auto"
+                  alt="{{ article.title | escape }}">
+              </div>
+            </a>
+          </div>
+        {% endunless %}
+
+<!--         <div class="grid__item large--two-tenths push--large--one-tenth">
+          <time datetime="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}" class="date">{{ article.published_at | date: format: 'date' }}</time>
+          <hr class="hr--small hr--left small--hide">
+        </div> -->
+
+
+        <div class="grid__item" style="padding-left: 0;">
+          <h6><a class="article__heading-link" style="color: #000; font-weight: 700; font-size: 1.1rem;" href="{{ article.url }}">{{ article.title }}</a></h6>
+
+<!--           <div class="rte rte--indented-images">
+            {{ article_content | strip_html | truncatewords: 120 }}
+          </div> -->
+
+          <p>
+            <a href="{{ article.url }}" class="text-link">{{ 'blogs.article.read_more' | t }} <span class="icon icon-arrow-right" aria-hidden="true"></span></a>
+          </p>
+      
+        </div>
+      </article>
+
+<!--       {% unless forloop.last %}<hr class="hr--clear">{% endunless %} -->
+
+
+    {% endfor %}
+</div>
+
+  {% comment %}
+<div class="row">
+  <div class="col-sm-12">
+
+    {% if paginate.pages > 1 %}
+      {% include 'pagination' %}
+    {% endif %}
+
+  </div>
+    </div>
+  {% endcomment %}
+
+  </div>
+
+
+{% endpaginate %}
+
+
+      <div class="section-header text-center">
+        <a href="{{ blog.url }}" class="btn">
+          {{ 'blogs.article.view_all' | t }}
+        </a>
+      </div>
+
+
+
+        {% if blog.comments_enabled? %}
+
+          {% if number_of_comments > 0 %}
+            <hr class="hr--large">
+            <h2 class="h3 text-center">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h2>
+            <hr class="hr--small hr--clear">
+          {% endif %}
+
+          {% paginate article.comments by 5 %}
+            {% comment %}
+              #comments is required, it is used as an anchor link by Shopify.
+            {% endcomment %}
+            <div id="comments">
+
+              {% if comment and comment.created_at %}
+                <p class="note form-success">
+                  {% if blog.moderated? %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </p>
+              {% endif %}
+
+              {% if number_of_comments > 0 %}
+                <ul class="no-bullets">
+                  {% comment %}
+                    If a comment was just submitted with no blank field, show it.
+                  {% endcomment %}
+                  {% if comment and comment.created_at %}
+                    <li id="{{ comment.id }}" class="comment first{% if article.comments_count == 0 %} last{% endif %}">
+                      {% include 'comment' %}
+                    </li>
+                  {% endif %}
+
+                  {% comment %}
+                    Showing the rest of the comments.
+                  {% endcomment %}
+                  {% for comment in article.comments %}
+                    <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% if forloop.first %} first{% endif %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                      {% include 'comment' %}
+                    </li>
+
+                    {% unless forloop.last %}
+                      <li><hr class="hr--clear"></li>
+                    {% endunless %}
+                  {% endfor %}
+                </ul>
+
+                {% if paginate.pages > 1 %}
+                  {% include 'pagination' %}
+                {% endif %}
+
+              {% endif %}
+
+              <hr class="hr--large">
+
+              <h2 class="h3 text-center">{{ 'blogs.comments.title' | t }}</h2>
+              <hr class="hr--small hr--clear">
+
+              <div class="form-vertical">
+                {% form 'new_comment', article %}
+
+                  {{ form.errors | default_errors }}
+
+                  <div class="grid grid--small">
+                    <div class="grid__item large--one-half">
+                      <label for="CommentAuthor" class="hidden-label">{{ 'blogs.comments.name' | t }}</label>
+                      <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" placeholder="{{ 'blogs.comments.name' | t }}" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                    </div>
+                    <div class="grid__item large--one-half">
+                      <label for="CommentEmail" class="hidden-label">{{ 'blogs.comments.email' | t }}</label>
+                      <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" placeholder="{{ 'blogs.comments.email' | t }}" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                    </div>
+                  </div>
+
+                  <label for="CommentBody" class="hidden-label">{{ 'blogs.comments.message' | t }}</label>
+                  <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+
+                  <div class="text-center">
+                    {% if blog.moderated? %}
+                      <p>{{ 'blogs.comments.moderated' | t }}</p>
+                    {% endif %}
+
+                    <input type="submit" class="btn" value="{{ 'blogs.comments.post' | t }}">
+                  </div>
+
+                {% endform %}
+              </div>
+
+            </div>
+          {% endpaginate %}
+        {% endif %}
+
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<hr class="hr--medium hr--clear">
+<div class="text-center">
+  <a href="{{ blog.url }}" class="return-link">&larr; {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+</div>
+
+
+
+{% schema %}
+{
+  "name": {
+    "da": "Artikelsider",
+    "de": "Artikelseiten",
+    "en": "Article pages",
+    "es": "Páginas del artículo",
+    "fi": "Artikkelisivut",
+    "fr": "Pages d'articles",
+    "hi": "लेख पेज",
+    "it": "Pagine articoli",
+    "ja": "記事ページ",
+    "ko": "문서 페이지",
+    "ms": "Halaman artikel",
+    "nb": "Artikkelsider",
+    "nl": "Artikelpagina's",
+    "pt-BR": "Páginas do artigo",
+    "pt-PT": "Páginas de artigo",
+    "sv": "Artikelsidor",
+    "th": "หน้าบทความ",
+    "zh-CN": "文章页面",
+    "zh-TW": "文章頁面"
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "social_sharing_blog",
+      "label": {
+        "da": "Vis knapper til deling på sociale medier",
+        "de": "Social-Sharing-Schaltflächen anzeigen",
+        "en": "Show social sharing buttons",
+        "es": "Mostrar botones para compartir en redes sociales",
+        "fi": "Näytä sosiaalisen median jakamispainikkeet",
+        "fr": "Afficher les boutons de partage social",
+        "hi": "सोशल शेयरिंग बटन दिखाएं",
+        "it": "Mostra i pulsanti per la condivisione sui social",
+        "ja": "ソーシャル共有ボタンを表示する",
+        "ko": "소셜 공유 버튼 표시",
+        "ms": "Tunjukkan butang perkongsian sosial",
+        "nb": "Vis knapper for deling på sosiale medier",
+        "nl": "Knoppen voor sociaal delen weergeven",
+        "pt-BR": "Exibir botões de compartilhamento em redes sociais",
+        "pt-PT": "Mostrar botões de partilha nas redes sociais",
+        "sv": "Visa knappar för delning i sociala medier",
+        "th": "แสดงปุ่มสำหรับแชร์ลงโซเชียล",
+        "zh-CN": "显示社交分享按钮",
+        "zh-TW": "顯示社群分享按鈕"
+      },
+      "default": true
+    }
+  ]
+}
+{% endschema %}

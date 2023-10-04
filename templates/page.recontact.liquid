@@ -1,0 +1,49 @@
+<!-- /templates/page.contact.liquid -->
+<div class="grid">
+
+  <div class="grid__item large--five-sixths push--large--one-twelfth">
+
+    <div class="grid">
+      <div class="grid__item large--four-fifths push--large--one-tenth">
+        <div class="rte rte--nomargin rte--indented-images">
+          {{ page.content }}
+        </div>
+
+        
+       <h4 class="mb-2">Contact us</h4>
+        <div data-reamaze-embed="contact" data-reamaze-embed-disable-subject="true" data-reamaze-embed-channel="support" data-reamaze-embed-form-id="18838"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support['account'] = 'otrperformance';
+  _support['contact_custom_fields'] = _support['contact_custom_fields'] || {};
+  _support['contact_custom_fields']['rmz_form_id_18838'] = {
+      'Phone Number': {
+        pos: 1606233298662,
+        type: 'phone',
+        value: '',
+        required: false,
+        placeholder: 'Phone Number',
+      },
+      'Preferred Method': {
+        pos: 1606233699446,
+        type: 'dropdown',
+        value: ['Email','Text','Call'],
+        required: true,
+        placeholder: 'Preferred Contact Method',
+      },
+      'Vehicle Information': {
+        pos: 1606233793850,
+        type: 'text',
+        value: '',
+        required: true,
+        placeholder: 'Year, Make, Engine',
+      }
+  };
+</script>

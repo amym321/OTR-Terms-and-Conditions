@@ -1,0 +1,150 @@
+<div class="hc-additional-products-with-variants">
+	{% for product in products %}
+
+  	{% if tags contains product.tag and product.product %}
+  	{% assign productRef = all_products[product.product] %}
+  	{% assign hasProduct = true %}
+		<div class="thisOne">
+
+
+
+				{% if hasProduct %}
+				  <div class="hc-aditional-products--checkbox">
+				          <input type="radio" name="addition-product" class="additional_product_checkbox" id="additional_none" style="visibility: hidden;" checked/>
+				          <label for="additional_none">Current Engine Hardware</label>
+				  </div>
+		  	{% endif %}
+				<div class="hc-aditional-products--checkbox">
+	          <input name="addition-product" type="radio" class="additional_product_checkbox" id="additional_{{productRef.handle}}" style="visibility: hidden;" />
+	          <label for="additional_{{productRef.handle}}">Pro Hardware + $100</label>
+	  		</div>
+			</div>
+  		<div class="hc-additional-products--variants" data-product="additional_{{productRef.handle}}">
+          {% unless productRef.has_only_default_variant %}
+                {% for option in productRef.options_with_values %}
+                  <div class="radio-wrapper js product-form__item">
+                    <label class="single-option-radio__label"
+                      for="ProductSelect-option-{{ forloop.index0 }}">
+                      {{ option.name | escape }}
+                    </label>
+                    {% if section.settings.product_selector == 'radio' %}
+                      <fieldset class="single-option-radio"
+                        id="ProductSelect-option-{{ forloop.index0 }}">
+                        {% assign option_index = forloop.index %}
+                        {% for value in option.values %}
+                          {% assign variant_label_state = true %}
+                          {% if productRef.options.size == 1 %}
+                            {% unless productRef.variants[forloop.index0].available  %}
+                              {% assign variant_label_state = false %}
+                            {% endunless %}
+                          {% endif %}
+                          <input type="radio"
+                            {% if option.selected_value == value %} checked="checked"{% endif %}
+                            {% unless variant_label_state %} disabled="disabled"{% endunless %}
+                            value="{{ value | escape }}"
+                            data-index="optionShirt{{ option_index }}"
+                            name="optionShirt{{ option.position }}"
+                            class="single-option-selector__radio{% unless variant_label_state %} disabled{% endunless %}"
+                            id="ProductSelect-option-{{ option.name | handleize }}-{{ value | escape }}">
+                          <label for="ProductSelect-option-{{ option.name | handleize }}-{{ value | escape }}"{% unless variant_label_state %} class="disabled"{% endunless %}>{{ value | escape }}</label>
+                        {% endfor %}
+                      </fieldset>
+                    {% else %}
+                      <select class="single-option-selector__radio single-option-selector-{{ section.id }} product-form__input" id="SingleOptionSelector-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
+                        {% for value in option.values %}
+                          <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value | escape }}</option>
+                        {% endfor %}
+                      </select>
+                    {% endif %}
+                  </div>
+                {% endfor %}
+              {% endunless %}
+
+              <select name="id" data-productid="{{ productRef.id }}" data-product="additional_{{productRef.handle}}" id="ProductSelectShirt" class="product-single__variants no-js ProductSelectShirt">
+                {% for variant in productRef.variants %}
+                  {% if variant.available %}
+                    <option
+                      data-sku="{{ variant.sku }}"
+                      value="{{ variant.id }}">
+                      {{ variant.title }} - <span class="money" data-product-id="{{ productRef.id }}">{{ variant.price | money_with_currency }}</span>
+                    </option>
+                  {% else %}
+                    <option disabled="disabled">
+                      {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                    </option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+  		</div>
+  	{% endif %}
+  	{% endfor %}
+
+<!--   {% if hasProduct %}
+  <div class="hc-aditional-products--checkbox">
+          <input type="radio" name="addition-product" class="additional_product_checkbox" id="additional_none" checked />
+          <label for="additional_none">Subscription only</label>
+  </div>
+  {% endif %} -->
+
+</div>
+
+<script>
+  document.querySelector(".thisOne").addEventListener("change", e => {
+    console.log('[HC] TEST 7');
+		console.log(e.target);
+    const target = e.target.matches("[name='addition-product']");
+    if (target) {
+      const id = document.querySelector(`[name="addition-product"]:checked`).getAttribute('id');
+      const container = document.querySelector(`[data-product="${id}"]`);
+      const containers = document.querySelectorAll(`.hc-additional-products--variants:not([data-product="${id}"])`);
+      console.log('[HC] TEST 2', id, container);
+	  container && container.classList.remove('hc-hidden');
+      containers.forEach(el => el.classList.add('hc-hidden'));
+    }
+  })
+
+	document.querySelector(".hc-additional-products--variants").addEventListener("change", e => {
+		console.log('back up dangerously into traffic');
+		console.log('proceed 250 feet down busy street');
+		//document.querySelector('#ProductSelect').value="Small / Charcoal - $0.00 USD";
+		var optionToSelect = '0';
+		var input = $( "input:checked" );
+		console.log(input);
+		var sizeShirt = input[1].defaultValue;
+		if (sizeShirt === ""){
+			sizeShirt = input[3].defaultValue;
+		}
+		var colorShirt = input[2].defaultValue;
+
+		$('#ProductSelectShirt > option').each(function() {
+
+			if(this.text.includes(sizeShirt) && this.text.includes(colorShirt)){
+				console.log(input);
+				console.log($('#ProductSelectShirt option[value="'+this.value+'"]'));
+				optionToSelect = this.value;
+
+				this.selected = "selected";
+			}
+		});
+
+		$('.ProductSelectShirt').val(optionToSelect).change();
+
+
+		//const id = document.query
+	})
+	function select(selectId, optionValToSelect){
+    //Get the select element by it's unique ID.
+    var selectElement = document.getElementById(selectId);
+    //Get the options.
+    var selectOptions = selectElement.options;
+    //Loop through these options using a for loop.
+    for (var opt, j = 0; opt = selectOptions[j]; j++) {
+        //If the option of value is equal to the option we want to select.
+        if (opt.value == optionValToSelect) {
+            //Select the option and break out of the for loop.
+            selectElement.selectedIndex = j;
+            break;
+        }
+    }
+}
+</script>

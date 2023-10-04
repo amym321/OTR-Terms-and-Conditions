@@ -1,0 +1,56 @@
+<div class="price-container{% if variant.unit_price_measurement %} price-container--unit-available{% endif %}" data-price-container>
+  {%- if variant.compare_at_price > variant.price -%}
+    <span id="PriceA11y" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+    <span class="product-single__price--wrapper" aria-hidden="false">
+      <span id="ComparePrice" class="product-single__price--compare-at">
+        {{ variant.compare_at_price | money }}
+      </span>
+    </span>
+    <span id="ComparePriceA11y" class="visually-hidden" aria-hidden="false">{{ 'products.general.sale_price' | t }}</span>
+  {%- else -%}
+    <span id="PriceA11y" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+    <span class="product-single__price--wrapper hide" aria-hidden="true">
+      <span id="ComparePrice" class="product-single__price--compare-at"></span>
+    </span>
+    <span id="ComparePriceA11y" class="visually-hidden" aria-hidden="true">{{ 'products.general.sale_price' | t }}</span>
+  {%- endif -%}
+
+  <span id="ProductPrice"
+    class="product-single__price{% if variant.compare_at_price > variant.price %} on-sale{% endif %}"
+    itemprop="price"
+    content="{{ variant.price | divided_by: 100.00 }}">
+    {% if product.tags contains 'dx' %}
+        <span class="money" style="text-decoration: line-through; font-size: 14px;" data-product-id="{{ product.id }}" id="planIdTag">{{ variant.price | plus: 60000 | money }}</span>
+
+        <span data-product-id="{{ product.id }}" style="font-weight: 800" id="planIdCode">$600 USD</span>
+        <br />
+         <span class="badge badge-success mb-2" style="background: linear-gradient(0.25turn, #FF7300, #FF7300);"><strong> FREE HARDWARE PROMO </strong></span> 
+    {% else %}
+      <span class="money" style="display: none; text-decoration: line-through; font-size: 14px;" data-product-id="{{ product.id }}" id="planIdTag">{{ variant.price | money }}</span>
+    	<span class="money" data-product-id="{{ product.id }}">{{ variant.price | money }}</span>
+    <br/>
+     <!-- <span class="badge badge-success mb-2" style="background: linear-gradient(0.25turn, #5188A8, #749EB4);"><strong> Labor Day Sale </strong></span>  -->
+    {% endif %}
+  </span>
+
+  <div class="product-single__unit">
+    {%- capture unit_price_separator -%}
+      <span aria-hidden="true">/</span><span class="visually-hidden">&nbsp;{{ 'general.accessibility.unit_price_separator' | t }}&nbsp;</span>
+    {%- endcapture -%}
+
+    {%- capture unit_price_base_unit -%}
+      <span data-unit-price-base-unit>
+        {%- if variant.unit_price_measurement -%}
+          {%- if variant.unit_price_measurement.reference_value != 1 -%}
+            {{- variant.unit_price_measurement.reference_value -}}
+          {%- endif -%}
+          {{ variant.unit_price_measurement.reference_unit }}
+        {%- endif -%}
+      </span>
+    {%- endcapture -%}
+    <span class="product-unit-price">
+      <span class="visually-hidden">{{ 'products.general.unit_price' | t }}</span>
+      <span data-unit-price>{{ variant.unit_price | money }}</span>{{- unit_price_separator -}}{{- unit_price_base_unit -}}
+    </span>
+  </div>
+</div>

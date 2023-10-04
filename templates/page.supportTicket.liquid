@@ -1,0 +1,56 @@
+
+<!-- /templates/page.liquid -->
+{% layout none %}
+<!doctype html>
+<html class="no-js" lang="{{ shop.locale }}">
+  <head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" async="" defer="" src="//push.reamaze.com/assets/reamaze-push.js"></script>
+    <script type="text/javascript" async="" defer="" src="//cdn.reamaze.com/assets/reamaze.js"></script>
+    <script type="text/javascript" async="" src="https://cdn.reamaze.com/assets/reamaze-loader.js?shop=otrperformance2.myshopify.com"></script>
+    
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
+    <title>
+    {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    </title>
+    <style>
+
+
+      .containerTS{
+       background: url('https://cdn.shopify.com/s/files/1/2628/2624/files/Ellipse_22.png?v=1634218811') no-repeat bottom left 100%, 
+         url('https://cdn.shopify.com/s/files/1/2628/2624/files/Ellipse_22.png?v=1634218811') no-repeat top right 100%; 
+
+      }
+
+     
+
+     
+     .iframeChanges{
+       margin: auto; 
+       width: 50%;
+       padding-left: 40px;
+      }
+		
+      
+
+     @media(max-width: 767px){
+       
+       .iframeChanges{
+       	 margin:auto; 
+         width: 100%; 
+         padding: 5px;
+       }
+       
+     }
+    </style>
+  </head>
+  <body class="">
+    {{ page.content }}
+	</body>
+</html>
