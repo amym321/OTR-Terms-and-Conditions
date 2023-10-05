@@ -384,6 +384,13 @@
 					var disable_recharge = evt.target.getAttribute('data-disable-recharge');
 					if (ReCharge.cart_options && !ReCharge.cart_options.disable && (!disable_recharge || disable_recharge !== 'true')) {
 						evt.preventDefault();
+
+						// check if Terms checkbox is checked - am
+						if (!document.querySelector('#agree:checked')) {
+							alert('You must accept the Terms and Conditions to proceed to checkout');
+							return false;
+						}
+
 						cartSubmit(ReCharge.cart_options, ReCharge.customer);
 					} else {
 						window.console.log('ReCharge was disabled intentionally.');

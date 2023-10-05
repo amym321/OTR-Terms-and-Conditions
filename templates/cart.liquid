@@ -3,6 +3,8 @@
 {% assign rtbundle_discount2 =  0 %}
 {% assign rtbundle_value =  0 %}
 {% assign diagnostics_in_cart = false %}
+    <script>  window.diagnostics_in_cart = false; </script>  {% comment %} for use with terms checkbox - am {% endcomment %}
+
 {% assign rtbundle_lines_total = 0 %}
 {% assign rtbundle_cart_discount =  0 %}
 
@@ -76,6 +78,9 @@
         {% comment %} set flag if cart contains Diagnotics product - am  {% endcomment %}
         {% if item.product.title contains 'Diagnostics' or item.product.title contains 'diagnostics' %}
           {% assign diagnostics_in_cart = true %}
+          <script> 
+            window.diagnostics_in_cart = true;
+          </script>
         {% endif  %}
 
           <div class="cart__row">
@@ -391,6 +396,19 @@
               {%- endcapture -%}
 
               <p class="rte"><em>{{ taxes_shipping_checkout }}</em></p>
+
+              {% comment %} Terms checkbox if cart has diagnostic sunscription - am {% endcomment %}
+              {% if diagnostics_in_cart == true %}
+                <p class="terms-checkbox" style="float: none; text-align: right; clear: both; margin: 10px 0;">
+                  <input style="float:none; vertical-align: middle;" type="checkbox" id="agree" />
+                  <em><label style="display:inline; float:none" for="agree">
+                    I agree with the <a href="/pages/terms-and-conditions" class="text-link">Terms and Conditions</a>
+                  </label></em>
+                </p>
+                <style> @media (max-width:768px) { .terms-checkbox { text-align: center; } } </style>
+              {% endif %}
+
+
               <button type="submit" name="update" class="btn--secondary update-cart" style="background-color: #fff; color: #000;">
                 {{ 'cart.general.update' | t }}
               </button>

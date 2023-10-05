@@ -3775,7 +3775,7 @@ theme.init = function() {
   theme.fitNav();
   theme.cartInit();
   theme.afterCartLoad();
-  theme.checkoutIndicator();
+  // theme.checkoutIndicator();
   theme.returnLink();
   theme.styleTextLinks();
   theme.searchModal();
