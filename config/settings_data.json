@@ -595,8 +595,8 @@
           "banner_gradient_end": "#ff7300",
           "banner_text_color": "#ffffff",
           "banner_description": "Join us at the California Trucking Show | October 14th & 15th | Ontario, CA | Booth #1002",
-          "banner_link_url": "",
-          "banner_link_text": ""
+          "banner_link_url": "https:\/\/californiatruckingshow.com\/",
+          "banner_link_text": "Learn More"
         }
       },
       "collection-sales-template": {
