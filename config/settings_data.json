@@ -1,1 +1,1017 @@
-{"current":{"color_body_bg":"#ffffff","color_headings":"#222323","color_body_text":"#222323","color_borders":"#1c1d1d","color_button_text":"#ffffff","color_primary":"#339933","color_secondary":"#339933","color_product_background":"#f7f7f7","color_sale_tag":"#e61300","color_input":"#f6f6f6","color_newsletter":"#f6f6f6","color_drawer_background":"#1c1d1d","color_drawer_text":"#ffffff","color_drawer_border":"#343535","color_drawer_button":"#339933","color_drawer_button_text":"#ffffff","type_header_family":"avenir_next_n6","type_header_base_size":"28px","type_header_border_thickness":"3px","type_accent_family":"avenir_next_n6","type_accent_transform":true,"type_accent_spacing":false,"type_accent_subheadings":false,"type_base_family":"avenir_next_n5","type_base_size":"16px","type_base_italize_titles":false,"cart_type":"page","rtbundle_display":true,"cart_notes_enable":true,"share_image":"","social_facebook_link":"https:\/\/www.facebook.com\/otrperformance","social_twitter_link":"https:\/\/twitter.com\/OTRPerformance","social_pinterest_link":"","social_instagram_link":"https:\/\/www.instagram.com\/otrperformance\/","social_snapchat_link":"","social_google_plus_link":"","social_tumblr_link":"","social_youtube_link":"https:\/\/www.youtube.com\/otrperformance","social_vimeo_link":"","social_fancy_link":"","share_facebook":true,"share_twitter":true,"share_pinterest":false,"favicon":"shopify:\/\/shop_images\/otr_IconSquareGreenWhiteBG_IconSquareGreenWhiteBG.png","checkout_header_image":"","checkout_logo_image":"shopify:\/\/shop_images\/otr_LogoGreenLG.png","checkout_logo_position":"left","checkout_logo_size":"medium","checkout_body_background_image":"","checkout_body_background_color":"#fff","checkout_input_background_color_mode":"white","checkout_sidebar_background_image":"","checkout_sidebar_background_color":"#fafafa","checkout_heading_font":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'","checkout_body_font":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'","checkout_accent_color":"#339933","checkout_button_color":"#000000","checkout_error_color":"#e32c2b","checkout_banner_background_color":"#fff","checkout_call_to_action_color":"#a26b25","checkout_use_header_image":false,"collection_products_grid":"collage","customer_layout":"customer_area","favicon_enable":false,"product_vendor_enable":false,"social_sharing_style":"clean","sections":{"header":{"type":"header","settings":{"logo":"shopify:\/\/shop_images\/otr_LogoGreenLG_d9ec9476-5df8-4dab-944c-217c7c81446d.png","logo_max_width":200,"header_color":"#000000","transparent_header_enable":false,"transparent_header_color":"#222323","search":"modal","main_menu_link_list":"main-menu","drawer_bottom_link_list":"footer","drawer_search_enable":true,"show_announcement":true,"home_page_only":false,"text":"Get <b>FREE<\/b> hardware ($200 value) with any OTR Diagnostics package! <u> Details <\/u> →","link":"shopify:\/\/products\/otr-diagnostics-professional-package","color_bg":"#339933","color_text":"#f6f6f6"}},"featured-products":{"type":"featured-products","settings":{"title":"Shop OTR Reset Tools","home_featured_products":"reset-tools","collection_products_grid":"grid"}},"newsletter":{"type":"newsletter","settings":{"heading":"Stay in touch!","subheading":"<p>Sign up for our newsletter! <\/p>"}},"footer":{"type":"footer","settings":{"footer_link_list":"footer","show_payment_icons":true}},"product-template":{"type":"product-template","blocks":{"1587561740390":{"type":"plan","settings":{"name":"Adapter Only","tag":"plan_none","product_1":"","product_2":"","product_1_recharge":false,"product_2_recharge":false,"interval_unit":"Months","interval_frequency":"1"}},"1587564167169":{"type":"plan","settings":{"name":"Current Engine Hardware","tag":"plan_pro","product_1":"otr-diagnostics-pro","product_2":"","product_1_recharge":true,"product_2_recharge":true,"interval_unit":"Months","interval_frequency":"12"}},"1587564121036":{"type":"plan","settings":{"name":"Pro Hardware + $100","tag":"pro_hardware","product_1":"otr-diagnostics-professional-package","product_2":"otr-diagnostics-pro","product_1_recharge":false,"product_2_recharge":true,"interval_unit":"Months","interval_frequency":"12"}},"1588099675304":{"type":"product_with_variants","settings":{"name":"Include Adapter","product":"nexiq-blue-link-mini-adapter","tag":"product_adapter"}},"bac21f45-92d0-48dd-a8fb-042ed96cfcbc":{"type":"plan","settings":{"name":"Add Plan","tag":"plan_unique","product_1":"","product_2":"","product_1_recharge":false,"product_2_recharge":false,"interval_unit":"Months","interval_frequency":"1"}},"0460f968-97d6-46ce-b2bf-43fc9a5b1648":{"type":"shirt","settings":{"name":"Add Product","product":"otr-diagnostics-professional-package","tag":"prologo"}}},"block_order":["1587561740390","1587564167169","1587564121036","1588099675304","bac21f45-92d0-48dd-a8fb-042ed96cfcbc","0460f968-97d6-46ce-b2bf-43fc9a5b1648"],"settings":{"zoom_enable":false,"social_sharing_products":false,"product_vendor_enable":false,"image_layout":"thumbnails","quantity_enabled":true,"product_selector":"radio","enable_payment_button":false,"add_to_cart_button_size":"large","additional_plans":"HARDWARE OPTIONS"}},"product-recommendations":{"type":"product-recommendations","settings":{"show_product_recommendations":false,"heading":"You may also like"}},"1581435567333":{"type":"featured-blog","settings":{"title":"Blog","blog":"quick-tips","post_limit":3,"blog_show_date":true,"blog_show_author":false,"blog_show_image":true,"blog_show_excerpt":true,"show_view_all":true}},"list-collections-template":{"type":"list-collections-template","blocks":{"1594413042719":{"type":"collection","settings":{"collection":"diagnostic-packages"}},"1600978103691":{"type":"collection","settings":{"collection":"reset-tools"}}},"block_order":["1594413042719","1600978103691"],"settings":{"display_type":"selected","sort":"alphabetical"}},"collection-template":{"type":"collection-template","settings":{"show_collection_image":false,"collection_sort_enable":false,"collection_tags_enable":false,"collection_products_grid":"grid","product_vendor_enable":false}},"1594669060962":{"type":"featured-products","settings":{"title":"Shop OTR Diagnostics","home_featured_products":"diagnostic-packages","collection_products_grid":"collage"}},"article-template":{"type":"article-template","settings":{"social_sharing_blog":true}},"slideshow":{"type":"slideshow","blocks":{"40fb12b5-bba6-4b74-b3cb-52d25af23133":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/ui2commands.jpg","image_position":"center center","image_overlay":true,"image_overlay_opacity":59,"text_alignment":"center","slide_heading":"Be One Step Ahead","slide_subheading":"Get detailed fault code information, monitor vehicle live data, aftertreatment system commands, forced DPF regen and much more with OTR Diagnostics v2.","button_label":"Learn more","button_link":"shopify:\/\/pages\/collections-info","slide_text_color":"#ffffff","slide_button_label_color":"#ffffff","slide_button_background_color":"#339933"}}},"block_order":["40fb12b5-bba6-4b74-b3cb-52d25af23133"],"disabled":true,"settings":{"home_hero_height":"adapt","hero_home_auto":false,"home_hero_auto_speed":5}},"160555462062599b95":{"type":"advanced-content","blocks":{"21790545-0dea-44e0-af7d-33851c3b556f":{"type":"html","settings":{"code":"<div class=\"text-center\">\n<a href=\"https:\/\/otrperformance.com\/products\/otr-diagnostics-professional-package\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Frame_241_1.png?v=1666299573\" alt=\"OTR Diagnositics Review \"><\/a>\n<\/div>","width":"100%","alignment":"top-middle"}},"160555462062599b95-0":{"type":"html","settings":{"code":"<div class=\"container section\" style=\"text-align:center; max-width: 1000px;\">   \n<div class=\"container\">\n  <div class=\"row row-cols-4 text-center\">\n <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Freightliner.png?v=1618511599\" class=\"img-fluid\" width=\"150px\" alt=\"freightliner\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/International.png?v=1618517930\" class=\"img-fluid\" width=\"150px\" alt=\"international\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Peterbilt.png?v=1618517930\" class=\"img-fluid\" width=\"150px\" alt=\"peterbilt\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Cummins.png?v=1618831222\" class=\"img-fluid\" width=\"70px\" alt=\"cummins\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Volvo.png?v=1618517930\" class=\"img-fluid\" width=\"150px\" alt=\"volvo\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Mack.png?v=1618517930\" class=\"img-fluid\" width=\"150px\" alt=\"mack\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Kenworth.png?v=1618517930\" class=\"img-fluid\" width=\"150px\" alt=\"kenworth\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Cat.png?v=1618831211\" class=\"img-fluid\" width=\"150px\" alt=\"cat\"> <\/div>\n        <\/div>\n    <\/div>\n<\/div>","width":"100%","alignment":"top-middle"}},"32e6d186-3477-4615-89ab-de409af7501c":{"type":"html","settings":{"code":"<h4 class=\"mb-0 text-center\">Two Unique Tools that get you back on the Road, Fast. <\/h4>","width":"100%","alignment":"center"}},"095c54bf-b81a-47d7-9076-8afde13804eb":{"type":"html","settings":{"code":"<div class=\"text-center\">\n<a href=\"https:\/\/otrperformance.com\/pages\/otrdiagnostics\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Main_a6eda17d-ee2a-454e-83ac-ea0f93b4545d.png?v=1647628376\" style=\"height: 300px;\" alt=\"diagnostics\"><\/a>\n<h3 class=\"mb-2\">OTR Diagnostics<\/h3>\n<p>Mobile App based diagnostic tool. View fault code, live data, send commands, and much more from your mobile device.<\/p>\n<a href=\"https:\/\/otrperformance.com\/pages\/otrdiagnostics\"><button class=\"mt-2 btn-otr\">Learn about OTR Diagnostics<\/button><\/a>\n<\/div>","width":"50%","alignment":"top-middle"}},"fe614953-60f8-4490-b34b-4830b88534fc":{"type":"html","settings":{"code":"<div class=\"text-center\">\n<a href=\"https:\/\/otrperformance.com\/pages\/otr-reset-tool\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/YourInControlOpti2.jpg?v=1571858633\" style=\"max-width: 300px;\" alt=\"reset tool\"><\/a>\n<h3 class=\"mb-2\"> OTR Reset Tool <\/h3>\n<p>Stand alone device. Send commands via timed delay. No buttons, screen or complicated menus.<\/p> \n<a href=\"https:\/\/otrperformance.com\/pages\/otr-reset-tool\"><button class=\"mt-2 btn-otr\">Learn about OTR Reset Tool<\/button><\/a>\n<\/div>","width":"50%","alignment":"top-middle"}}},"block_order":["21790545-0dea-44e0-af7d-33851c3b556f","160555462062599b95-0","32e6d186-3477-4615-89ab-de409af7501c","095c54bf-b81a-47d7-9076-8afde13804eb","fe614953-60f8-4490-b34b-4830b88534fc"],"settings":{}},"16061660640dcecc4b":{"type":"advanced-content","blocks":{"16061660640dcecc4b-0":{"type":"html","settings":{"code":"<div class=\"text-center\">\n<img data-src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/MoneyBack-Guarnatee_60_Day.png?v=1616613607\" class=\"lazyload\" style=\"max-width: 100px;\" alt=\"60dayguarantee\">\n            <h2 class=\"mb-2 mt-2\">60-Day Guarantee<\/h2>\n            <p style=\"font-size: 12px;\">We get it, you don’t know us very well yet. That’s why our products comes with a 60-day, no-hassle, money-back guarantee. If they don't fit your needs for any reason, just let us know within 60 days, and we’ll refund 100% of your purchase price. We’ve got your back.<\/p>\n<\/div>","width":"50%","alignment":"center"}},"f342b182-47d6-4e59-bfca-9b3b8f531039":{"type":"html","settings":{"code":"<div class=\"text-center\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/MoneyBack-Guarnatee_USA.png?v=1583943641\" class=\"lazyload\" style=\"max-width: 100px;\" alt=\"usasupport\">\n            <h2 class=\"mb-2 mt-2\">USA Support<\/h2>\n            <p style=\"font-size: 12px;\">Located in Detroit MI, (EST). A truly committed team of trained experts that are there to assist with any customer service, technical support or general questions you may have. No bots. Real help from real people, when you need us! Contact us via phone, chat, or email anytime.<\/p>\n<\/div>","width":"50%","alignment":"top-middle"}}},"block_order":["16061660640dcecc4b-0","f342b182-47d6-4e59-bfca-9b3b8f531039"],"settings":{}},"161851072483c08fb6":{"type":"advanced-content","blocks":{"161851072483c08fb6-0":{"type":"html","settings":{"code":"<div class=\"container section\">\n    <div class=\"how-it-works\">\n        <h3 class=\"mb-0 text-center text-white\">How OTR Diagnostics Works<\/h3>\n        <p class=\"text-center\">Set up in a few simple steps.<\/p>\n        <div class=\"row text-white\">\n            <div class=\"col-md-3 col-sm-12\">\n                <div class=\"text-center mb-4\"> <img data-src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Main.png?v=1646839748\" class=\"img-thumbnail rounded-circle ls-is-cached lazyloaded\" style=\"max-height: 175px;\" alt=\"subscriptions\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Main.png?v=1646839748\">\n                    <h4 class=\"text-white mt-2 mb-1\">Step 1<\/h4>\n                    <p>Select Subscription Plan, Diagnostic Adapter For Your Engine<\/p>\n                <\/div>\n            <\/div>\n            <div class=\"col-md-3 col-sm-12\">\n                <div class=\"text-center mb-4\"> <img data-src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/OTRLinkWebImage.jpg?v=1607456754\" class=\"img-thumbnail rounded-circle lazyloaded\" style=\"max-height: 175px;\" alt=\"adapterconnect\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/OTRLinkWebImage.jpg?v=1607456754\">\n                    <h4 class=\"text-white mt-2 mb-1\">Step 2<\/h4>\n                    <p>Connect Adapter To Vehicle Diagnostic Plug<\/p>\n                <\/div>\n            <\/div>\n            <div class=\"col-md-3 col-sm-12\">\n                <div class=\"text-center mb-4\"> <img data-src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Dx-App.jpg?v=1607457627\" class=\"img-thumbnail rounded-circle lazyloaded\" style=\"max-height: 175px;\" alt=\"app\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Dx-App.jpg?v=1607457627\">\n                    <h4 class=\"text-white mt-2 mb-1\">Step 3<\/h4>\n                    <p>Download OTR Diagnostics App For Your Mobile Device<\/p>\n                <\/div>\n            <\/div>\n            <div class=\"col-md-3 col-sm-12\">\n                <div class=\"text-center mb-4\"> <img data-src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/IMG_7355_1.png?v=1646840874\" class=\"img-thumbnail rounded-circle ls-is-cached lazyloaded\" style=\"max-height: 175px;\" alt=\"command\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/IMG_7355_1.png?v=1646840874\">\n                    <h4 class=\"text-white mt-2 mb-1\">Step 4<\/h4>\n                    <p>Begin Using OTR Diagnostics App<\/p>\n                <\/div>\n            <\/div>\n        <\/div>\n    <\/div>\n<\/div>","width":"100%","alignment":"top-middle"}}},"block_order":["161851072483c08fb6-0"],"disabled":true,"settings":{}},"info-collections-template":{"type":"info-collections-template","blocks":{"c46fd199-01d1-491b-bcbf-1f9aca98bda2":{"type":"collection","settings":{"collection":"diagnostic-packages"}},"3a58323b-f3dc-4135-974d-d723b4e8bb89":{"type":"collection","settings":{"collection":"reset-tools"}},"0b24c42b-3d89-4168-a2eb-eec8a1353146":{"type":"collection","settings":{"collection":"off-highway"}}},"block_order":["c46fd199-01d1-491b-bcbf-1f9aca98bda2","3a58323b-f3dc-4135-974d-d723b4e8bb89","0b24c42b-3d89-4168-a2eb-eec8a1353146"],"settings":{"display_type":"selected","sort":"alphabetical"}},"1648736409cc017703":{"type":"featured-blog","disabled":true,"settings":{"title":"Company News","blog":"news","post_limit":3,"blog_show_date":true,"blog_show_author":false,"blog_show_image":true,"blog_show_excerpt":false,"show_view_all":false}},"1661991000735bee2c":{"type":"featured-row","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/OTR_Diagnostics_v2.jpg","layout":"left","title":"OTR Diagnostics goes beyond your typical hand held scan tool.","text":"<p>OTR Diagnostics gives you access to vital information about fault codes, their causes and more. These details rival advanced dealership software, far exceeding your average handheld scan tool.<\/p>","button_label":"Shop Diagnostics","button_link":"shopify:\/\/products\/otr-diagnostics-professional-package"}},"1744c436-9f07-4e13-ac53-f658ee7c2e20":{"type":"featured-row","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/OTR_Diagnostics_v2.jpg","layout":"left","title":"Frustrated with constant lights, codes, and derates?","text":"<p>OTR's easy-to-use tools get you back on the road fast. <\/p>","button_label":"Learn More","button_link":"shopify:\/\/pages\/otrdiagnostics"}},"25660b69-2d30-456c-b6e4-035f50a86c5c":{"type":"featured-content","settings":{"home_page_full_width":true,"section_title":"Drive with Peace of Mind","text":"<p>Join over 20,000 people from owner-operators to fleets that use OTR products to troubleshoot, clear derates and keep their operations running smoothly.<\/p>","text_size":"large"}},"a84c21a6-527f-4915-92ad-513a9980c943":{"type":"featured-video","settings":{"heading":"","video_url":"https:\/\/www.youtube.com\/watch?v=bmPQiEiih9s"}},"98244b1d-8929-4366-96a8-6aa2cd6d99a9":{"type":"featured-row","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/YourInControl_dd5a8121-f089-4442-a5cb-dd1fff6d6b04.png","layout":"left","title":"Limited time only! Take $100 OFF OTR Reset Tools.","text":"<p>Automatic Discount applied at checkout! <\/p>","button_label":"Learn More","button_link":"shopify:\/\/collections\/reset-tools"}},"37a4ca19-96b8-4601-a9e6-05ce3362c648":{"type":"featured-row","settings":{"image":"shopify:\/\/shop_images\/OTR_Performance_Location.jpg","layout":"left","title":"OTR Headquarters","text":"<p><strong>OTR Performance® Inc.<\/strong><br\/>51619 Industrial Rd. <br\/>Macomb, Michigan, 48042<br\/>USA<\/p><p><strong>HOURS<\/strong><\/p><p>Monday - Friday: 8am - 5pm, EST<br\/>Saturday: Closed<br\/>Sunday: Closed<\/p><p><strong>📞 <\/strong><a href=\"tel:+15867994375\"><strong>(586) 799-4375<\/strong><\/a><\/p>","button_label":"","button_link":""}},"e7f00885-5cb3-4c9f-a4e3-bf94bcd90e14":{"type":"advanced-content","blocks":{"e7f00885-5cb3-4c9f-a4e3-bf94bcd90e14-16662888988ec00cb4-0":{"type":"html","settings":{"code":"<div style=\"text-align:center;\">\n<h3>Stop Worrying About What’ll Happen Next!\n<\/h3>OTR’s tools can greatly reduce your chances of losing a load, big repair bills, or your need for a tow.\n<\/div>","width":"100%","alignment":"top-middle"}}},"block_order":["e7f00885-5cb3-4c9f-a4e3-bf94bcd90e14-16662888988ec00cb4-0"],"settings":{}},"415c3813-1990-4f09-a738-a8fb25765740":{"type":"advanced-content","blocks":{"415c3813-1990-4f09-a738-a8fb25765740-166629261485e7b5b0-0":{"type":"html","settings":{"code":"<p><\/p><div class=\"text-center\">\n<a href=\"https:\/\/otrperformance.com\/collections\/reset-tools\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Group_284_1.png?v=1666299572\" alt=\"Reset tool \"><\/a>\n<\/div>","width":"100%","alignment":"top-middle"}}},"block_order":["415c3813-1990-4f09-a738-a8fb25765740-166629261485e7b5b0-0"],"settings":{}},"98395288-0446-43c5-989c-f854b7142ed4":{"type":"featured-video","settings":{"heading":"","video_url":"https:\/\/www.youtube.com\/watch?v=jZZjKghA4VU"}},"906a189b-8b52-4768-bf41-71a5d4046556":{"type":"featured-video","settings":{"heading":"","video_url":"https:\/\/www.youtube.com\/watch?v=-KOfZ-yp_h8"}},"bundle-collection-template":{"type":"bundle-collection-template","settings":{"show_collection_image":false,"collection_sort_enable":false,"collection_tags_enable":false,"collection_products_grid":"grid","product_vendor_enable":false}},"banner-section":{"type":"banner-section","custom_css":[],"settings":{"enable_section":true,"banner_text_color":"#ffffff","title":"Take Control of Your Truck Maintenance","description":"\"My experience using OTR Diagnostics is wonderful. Knowing that I can find out why my check engine light is on and not taking my truck to the shop is definitely a money saver.\" - Clifford S.","terms":"Limited time. While supplies last. Cannot be combined with any other offer. Applies to new OTR Diagnostics subscription only.","background_image":"shopify:\/\/shop_images\/Background_Banner2.jpg","heading_image":"shopify:\/\/shop_images\/5-stars.svg","button_url":"shopify:\/\/products\/otr-diagnostics-professional-package","button_text":"Claim FREE Hardware"}},"news-banner":{"type":"news-banner","settings":{"enable_section":false,"banner_gradient_start":"#465461","banner_gradient_end":"#7e99b2","banner_text_color":"#ffffff","banner_description":"National Truck Driver Appreciation Week   -","banner_link_url":"shopify:\/\/blogs\/quick-tips\/miles-of-gratitude-9-tips-to-better-trucking","banner_link_text":"Read our appreciation"}},"collection-sales-template":{"type":"collection-sales-template","settings":{"show_collection_image":false,"collection_sort_enable":false,"collection_tags_enable":false,"collection_products_grid":"collage","product_vendor_enable":false}}},"content_for_index":["25660b69-2d30-456c-b6e4-035f50a86c5c","1744c436-9f07-4e13-ac53-f658ee7c2e20","slideshow","98244b1d-8929-4366-96a8-6aa2cd6d99a9","98395288-0446-43c5-989c-f854b7142ed4","160555462062599b95","a84c21a6-527f-4915-92ad-513a9980c943","e7f00885-5cb3-4c9f-a4e3-bf94bcd90e14","1661991000735bee2c","161851072483c08fb6","1594669060962","906a189b-8b52-4768-bf41-71a5d4046556","415c3813-1990-4f09-a738-a8fb25765740","featured-products","1581435567333","1648736409cc017703","16061660640dcecc4b","37a4ca19-96b8-4601-a9e6-05ce3362c648"],"blocks":{"855628211100114053":{"type":"shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507","disabled":false,"settings":{}},"6897698614501909729":{"type":"shopify:\/\/apps\/superspeed-googles-page-speed\/blocks\/app-embed\/ea1b2c2c-4644-44b9-b10b-fdb914884a8c","disabled":false,"settings":{"optimization_level":"extreme"}},"5149645339031002760":{"type":"shopify:\/\/apps\/order-limits-minmaxify\/blocks\/app-embed-block\/3acfba32-89f3-4377-ae20-cbb9abc48475","disabled":false,"settings":{"async":false}},"11432920177897217407":{"type":"shopify:\/\/apps\/epa-easy-product-addons\/blocks\/speedup_link\/0099190e-a0cb-49e7-8d26-026c9d26f337","disabled":true,"settings":{}},"17151115064775110295":{"type":"shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e","disabled":false,"settings":{"color_brand":"#339933","contrast_color":"#ffffff","color_brand_secondary":"#339933","corners":"8px","app_background":"#ffffff","app_container":1200,"app_vertical_padding":0,"images_aspect_ratio":"1","cards_background":"#ffffff","cards_border_color":"#787878"}},"17592058902588436946":{"type":"shopify:\/\/apps\/c-year-make-model-search\/blocks\/app-embed-ymm-basic-script\/ce35ea35-ef50-4f43-8cb6-7c34cae4c285","disabled":false,"settings":{"searchbox_title":"Search By Year, Make and Model","search_button":"Search","reset_button":"Reset","select_label":"Select","none_txt":"None","ymm_searchbox_use":true,"products_limit":"20","img_dimension":"240x240","show_sku":false,"show_vendor":false,"product_pagetitle":"Products Result","products":"Products","product":"Product","no_results":"There are No Products found.","sale_lbl":"Sale","soldout_lbl":"Soldout","ymm_custom_css":""}}}},"presets":{"Classic":{"cart_type":"page","cart_notes_enable":false,"checkout_accent_color":"#a26b25","checkout_banner_background_color":"#fff","checkout_button_color":"#000000","checkout_call_to_action_color":"#a26b25","checkout_use_header_image":false,"collection_products_grid":"collage","color_body_bg":"#ffffff","color_body_text":"#222323","color_borders":"#1c1d1d","color_button_text":"#ffffff","color_drawer_background":"#1c1d1d","color_drawer_border":"#343535","color_drawer_button":"#a26b25","color_drawer_button_text":"#ffffff","color_drawer_text":"#ffffff","color_headings":"#222323","color_input":"#f6f6f6","color_newsletter":"#f6f6f6","color_primary":"#1c1d1d","color_product_background":"#f7f7f7","color_sale_tag":"#990000","color_secondary":"#a26b25","customer_layout":"customer_area","favicon_enable":false,"product_vendor_enable":false,"share_facebook":true,"share_pinterest":true,"share_twitter":true,"social_sharing_style":"clean","type_accent_family":"montserrat_n6","type_accent_spacing":true,"type_accent_transform":true,"type_accent_subheadings":true,"type_base_family":"arapey_n4","type_base_italize_titles":true,"type_base_size":"16px","type_header_base_size":"30px","type_header_border_thickness":"1px","type_header_family":"old_standard_tt_n4","sections":{"header":{"type":"header","settings":{"show_announcement":true,"color_bg":"#1c1d1d","color_text":"#ffffff"}},"slideshow":{"type":"slideshow","blocks":{"slideshow-0":{"type":"slide","settings":{}},"slideshow-1":{"type":"slide","settings":{}}},"block_order":["slideshow-0","slideshow-1"],"settings":{}},"featured-products":{"type":"featured-products","settings":{"home_featured_products":"frontpage"}},"featured-content":{"type":"featured-content","settings":{}},"featured-collections":{"type":"featured-collections","blocks":{"featured-collections-0":{"type":"collection","settings":{}},"featured-collections-1":{"type":"collection","settings":{}},"featured-collections-2":{"type":"collection","settings":{}}},"block_order":["featured-collections-0","featured-collections-1","featured-collections-2"],"settings":{}},"newsletter":{"type":"newsletter","settings":{}}},"content_for_index":["slideshow","featured-content","featured-collections","featured-products","newsletter"]},"Playful":{"color_body_bg":"#ffffff","color_body_text":"#565656","color_borders":"#5dd2b4","color_button_text":"#ffffff","color_primary":"#7737BD","color_secondary":"#058677","color_product_background":"#fff4f6","color_sale_tag":"#e80970","color_input":"#f6f6f6","color_newsletter":"#bde9f2","color_drawer_background":"#360f5f","color_drawer_text":"#ffffff","color_drawer_border":"#50297a","color_drawer_button":"#7737BD","color_drawer_button_text":"#ffffff","color_headings":"#321863","type_header_family":"quicksand_n7","type_header_base_size":"38px","type_header_border_thickness":"1px","type_accent_family":"roboto_n7","type_accent_transform":true,"type_accent_spacing":true,"type_accent_subheadings":false,"type_base_family":"helvetica_n4","type_base_size":"17px","type_base_italize_titles":false,"cart_type":"page","cart_notes_enable":true,"social_facebook_link":"","social_twitter_link":"","social_pinterest_link":"","social_instagram_link":"","social_snapchat_link":"","social_google_plus_link":"","social_tumblr_link":"","social_youtube_link":"","social_vimeo_link":"","social_fancy_link":"","share_facebook":true,"share_twitter":true,"share_pinterest":true,"favicon":"","checkout_header_image":"","checkout_logo_image":"","checkout_logo_position":"left","checkout_logo_size":"small","checkout_body_background_image":"","checkout_body_background_color":"#ffffff","checkout_input_background_color_mode":"white","checkout_sidebar_background_image":"","checkout_sidebar_background_color":"#fff4f6","checkout_heading_font":"Helvetica Neue","checkout_body_font":"Roboto","checkout_accent_color":"#7737BD","checkout_button_color":"#7737BD","checkout_error_color":"#f01130","checkout_banner_background_color":"#fff","checkout_call_to_action_color":"#a26b25","checkout_use_header_image":false,"collection_products_grid":"collage","customer_layout":"customer_area","favicon_enable":false,"product_vendor_enable":false,"social_sharing_style":"clean","sections":{"slideshow":{"type":"slideshow","blocks":{"1495823280244":{"type":"slide","settings":{"slide_text_color":"#ffffff","slide_button_label_color":"#003B34","slide_button_background_color":"#84D1B2"}}},"block_order":["1495823280244"],"settings":{"hero_home_auto":false,"home_hero_auto_speed":5}},"featured-products":{"type":"featured-products","settings":{"home_featured_products":"frontpage","collection_products_grid":"collage"}},"newsletter":{"type":"newsletter","settings":{}},"header":{"type":"header","settings":{"logo_max_width":260,"search":"modal","main_menu_link_list":"main-menu","show_announcement":false,"color_bg":"#290c49","color_text":"#ffffff"}},"footer":{"type":"footer","settings":{"footer_link_list":"footer"}},"collection-template":{"type":"collection-template","settings":{"collection_tags_enable":false,"collection_products_grid":"grid","product_vendor_enable":false}},"1494860348200":{"type":"featured-row","settings":{"layout":"right"}},"1494894035034":{"type":"featured-row","settings":{"layout":"left"}},"product-template":{"type":"product-template","settings":{"zoom_enable":false,"social_sharing_products":true,"product_vendor_enable":false}},"1496078102297":{"type":"advanced-content","blocks":{"1496078102297-0":{"type":"html","settings":{"code":"<div style=\"text-align:center;\">\n<h1 class=\"h1\">Use HTML to format your text so it can be easily read.<\/h1>This text can be used to share information about your brand with customers.<\/div>","width":"100%","alignment":"top-middle"}}},"block_order":["1496078102297-0"],"settings":{}},"1496177901425":{"type":"advanced-content","blocks":{"1496177901425-0":{"type":"html","settings":{"code":"<div style=\"width:745px;text-align: center; margin: 0 auto;\">This text can be used to share information about your brand with customers.<\/div>","width":"100%","alignment":"top-middle"}}},"block_order":["1496177901425-0"],"settings":{}}},"content_for_index":["slideshow","1496177901425","featured-products","newsletter","1496078102297","1494860348200","1494894035034"]}}}
+{
+  "current": {
+    "color_body_bg": "#ffffff",
+    "color_headings": "#222323",
+    "color_body_text": "#222323",
+    "color_borders": "#1c1d1d",
+    "color_button_text": "#ffffff",
+    "color_primary": "#339933",
+    "color_secondary": "#339933",
+    "color_product_background": "#f7f7f7",
+    "color_sale_tag": "#e61300",
+    "color_input": "#f6f6f6",
+    "color_newsletter": "#f6f6f6",
+    "color_drawer_background": "#1c1d1d",
+    "color_drawer_text": "#ffffff",
+    "color_drawer_border": "#343535",
+    "color_drawer_button": "#339933",
+    "color_drawer_button_text": "#ffffff",
+    "type_header_family": "avenir_next_n6",
+    "type_header_base_size": "28px",
+    "type_header_border_thickness": "3px",
+    "type_accent_family": "avenir_next_n6",
+    "type_accent_transform": true,
+    "type_accent_spacing": false,
+    "type_accent_subheadings": false,
+    "type_base_family": "avenir_next_n5",
+    "type_base_size": "16px",
+    "type_base_italize_titles": false,
+    "cart_type": "page",
+    "rtbundle_display": true,
+    "cart_notes_enable": true,
+    "share_image": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/otrperformance",
+    "social_twitter_link": "https:\/\/twitter.com\/OTRPerformance",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/otrperformance\/",
+    "social_snapchat_link": "",
+    "social_google_plus_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "https:\/\/www.youtube.com\/otrperformance",
+    "social_vimeo_link": "",
+    "social_fancy_link": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": false,
+    "favicon": "shopify:\/\/shop_images\/otr_IconSquareGreenWhiteBG_IconSquareGreenWhiteBG.png",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/otr_LogoGreenLG.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#339933",
+    "checkout_button_color": "#000000",
+    "checkout_error_color": "#e32c2b",
+    "checkout_banner_background_color": "#fff",
+    "checkout_call_to_action_color": "#a26b25",
+    "checkout_use_header_image": false,
+    "collection_products_grid": "collage",
+    "customer_layout": "customer_area",
+    "favicon_enable": false,
+    "product_vendor_enable": false,
+    "social_sharing_style": "clean",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/otr_LogoGreenLG_d9ec9476-5df8-4dab-944c-217c7c81446d.png",
+          "logo_max_width": 200,
+          "header_color": "#000000",
+          "transparent_header_enable": false,
+          "transparent_header_color": "#222323",
+          "search": "modal",
+          "main_menu_link_list": "main-menu",
+          "drawer_bottom_link_list": "footer",
+          "drawer_search_enable": true,
+          "show_announcement": true,
+          "home_page_only": false,
+          "text": "Get <b>FREE<\/b> hardware ($200 value) with any OTR Diagnostics package! <u> Details <\/u> →",
+          "link": "shopify:\/\/products\/otr-diagnostics-professional-package",
+          "color_bg": "#339933",
+          "color_text": "#f6f6f6"
+        }
+      },
+      "featured-products": {
+        "type": "featured-products",
+        "settings": {
+          "title": "Shop OTR Reset Tools",
+          "home_featured_products": "reset-tools",
+          "collection_products_grid": "grid"
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "heading": "Stay in touch!",
+          "subheading": "<p>Sign up for our newsletter! <\/p>"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer_link_list": "footer",
+          "show_payment_icons": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "blocks": {
+          "1587561740390": {
+            "type": "plan",
+            "settings": {
+              "name": "Adapter Only",
+              "tag": "plan_none",
+              "product_1": "",
+              "product_2": "",
+              "product_1_recharge": false,
+              "product_2_recharge": false,
+              "interval_unit": "Months",
+              "interval_frequency": "1"
+            }
+          },
+          "1587564167169": {
+            "type": "plan",
+            "settings": {
+              "name": "Current Engine Hardware",
+              "tag": "plan_pro",
+              "product_1": "otr-diagnostics-pro",
+              "product_2": "",
+              "product_1_recharge": true,
+              "product_2_recharge": true,
+              "interval_unit": "Months",
+              "interval_frequency": "12"
+            }
+          },
+          "1587564121036": {
+            "type": "plan",
+            "settings": {
+              "name": "Pro Hardware + $100",
+              "tag": "pro_hardware",
+              "product_1": "otr-diagnostics-professional-package",
+              "product_2": "otr-diagnostics-pro",
+              "product_1_recharge": false,
+              "product_2_recharge": true,
+              "interval_unit": "Months",
+              "interval_frequency": "12"
+            }
+          },
+          "1588099675304": {
+            "type": "product_with_variants",
+            "settings": {
+              "name": "Include Adapter",
+              "product": "nexiq-blue-link-mini-adapter",
+              "tag": "product_adapter"
+            }
+          },
+          "bac21f45-92d0-48dd-a8fb-042ed96cfcbc": {
+            "type": "plan",
+            "settings": {
+              "name": "Add Plan",
+              "tag": "plan_unique",
+              "product_1": "",
+              "product_2": "",
+              "product_1_recharge": false,
+              "product_2_recharge": false,
+              "interval_unit": "Months",
+              "interval_frequency": "1"
+            }
+          },
+          "0460f968-97d6-46ce-b2bf-43fc9a5b1648": {
+            "type": "shirt",
+            "settings": {
+              "name": "Add Product",
+              "product": "otr-diagnostics-professional-package",
+              "tag": "prologo"
+            }
+          }
+        },
+        "block_order": [
+          "1587561740390",
+          "1587564167169",
+          "1587564121036",
+          "1588099675304",
+          "bac21f45-92d0-48dd-a8fb-042ed96cfcbc",
+          "0460f968-97d6-46ce-b2bf-43fc9a5b1648"
+        ],
+        "settings": {
+          "zoom_enable": false,
+          "social_sharing_products": false,
+          "product_vendor_enable": false,
+          "image_layout": "thumbnails",
+          "quantity_enabled": true,
+          "product_selector": "radio",
+          "enable_payment_button": false,
+          "add_to_cart_button_size": "large",
+          "additional_plans": "HARDWARE OPTIONS"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": false,
+          "heading": "You may also like"
+        }
+      },
+      "1581435567333": {
+        "type": "featured-blog",
+        "settings": {
+          "title": "Blog",
+          "blog": "quick-tips",
+          "post_limit": 3,
+          "blog_show_date": true,
+          "blog_show_author": false,
+          "blog_show_image": true,
+          "blog_show_excerpt": true,
+          "show_view_all": true
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "blocks": {
+          "1594413042719": {
+            "type": "collection",
+            "settings": {
+              "collection": "diagnostic-packages"
+            }
+          },
+          "1600978103691": {
+            "type": "collection",
+            "settings": {
+              "collection": "reset-tools"
+            }
+          }
+        },
+        "block_order": [
+          "1594413042719",
+          "1600978103691"
+        ],
+        "settings": {
+          "display_type": "selected",
+          "sort": "alphabetical"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "show_collection_image": false,
+          "collection_sort_enable": false,
+          "collection_tags_enable": false,
+          "collection_products_grid": "grid",
+          "product_vendor_enable": false
+        }
+      },
+      "1594669060962": {
+        "type": "featured-products",
+        "settings": {
+          "title": "Shop OTR Diagnostics",
+          "home_featured_products": "diagnostic-packages",
+          "collection_products_grid": "collage"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "social_sharing_blog": true
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "40fb12b5-bba6-4b74-b3cb-52d25af23133": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ui2commands.jpg",
+              "image_position": "center center",
+              "image_overlay": true,
+              "image_overlay_opacity": 59,
+              "text_alignment": "center",
+              "slide_heading": "Be One Step Ahead",
+              "slide_subheading": "Get detailed fault code information, monitor vehicle live data, aftertreatment system commands, forced DPF regen and much more with OTR Diagnostics v2.",
+              "button_label": "Learn more",
+              "button_link": "shopify:\/\/pages\/collections-info",
+              "slide_text_color": "#ffffff",
+              "slide_button_label_color": "#ffffff",
+              "slide_button_background_color": "#339933"
+            }
+          }
+        },
+        "block_order": [
+          "40fb12b5-bba6-4b74-b3cb-52d25af23133"
+        ],
+        "disabled": true,
+        "settings": {
+          "home_hero_height": "adapt",
+          "hero_home_auto": false,
+          "home_hero_auto_speed": 5
+        }
+      },
+      "160555462062599b95": {
+        "type": "advanced-content",
+        "blocks": {
+          "21790545-0dea-44e0-af7d-33851c3b556f": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"text-center\">\n<a href=\"https:\/\/otrperformance.com\/products\/otr-diagnostics-professional-package\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Frame_241_1.png?v=1666299573\" alt=\"OTR Diagnositics Review \"><\/a>\n<\/div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          },
+          "160555462062599b95-0": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"container section\" style=\"text-align:center; max-width: 1000px;\">   \n<div class=\"container\">\n  <div class=\"row row-cols-4 text-center\">\n <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Freightliner.png?v=1618511599\" class=\"img-fluid\" width=\"150px\" alt=\"freightliner\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/International.png?v=1618517930\" class=\"img-fluid\" width=\"150px\" alt=\"international\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Peterbilt.png?v=1618517930\" class=\"img-fluid\" width=\"150px\" alt=\"peterbilt\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Cummins.png?v=1618831222\" class=\"img-fluid\" width=\"70px\" alt=\"cummins\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Volvo.png?v=1618517930\" class=\"img-fluid\" width=\"150px\" alt=\"volvo\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Mack.png?v=1618517930\" class=\"img-fluid\" width=\"150px\" alt=\"mack\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Kenworth.png?v=1618517930\" class=\"img-fluid\" width=\"150px\" alt=\"kenworth\"> <\/div>\n            <div class=\"col\"> <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Cat.png?v=1618831211\" class=\"img-fluid\" width=\"150px\" alt=\"cat\"> <\/div>\n        <\/div>\n    <\/div>\n<\/div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          },
+          "32e6d186-3477-4615-89ab-de409af7501c": {
+            "type": "html",
+            "settings": {
+              "code": "<h4 class=\"mb-0 text-center\">Two Unique Tools that get you back on the Road, Fast. <\/h4>",
+              "width": "100%",
+              "alignment": "center"
+            }
+          },
+          "095c54bf-b81a-47d7-9076-8afde13804eb": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"text-center\">\n<a href=\"https:\/\/otrperformance.com\/pages\/otrdiagnostics\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Main_a6eda17d-ee2a-454e-83ac-ea0f93b4545d.png?v=1647628376\" style=\"height: 300px;\" alt=\"diagnostics\"><\/a>\n<h3 class=\"mb-2\">OTR Diagnostics<\/h3>\n<p>Mobile App based diagnostic tool. View fault code, live data, send commands, and much more from your mobile device.<\/p>\n<a href=\"https:\/\/otrperformance.com\/pages\/otrdiagnostics\"><button class=\"mt-2 btn-otr\">Learn about OTR Diagnostics<\/button><\/a>\n<\/div>",
+              "width": "50%",
+              "alignment": "top-middle"
+            }
+          },
+          "fe614953-60f8-4490-b34b-4830b88534fc": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"text-center\">\n<a href=\"https:\/\/otrperformance.com\/pages\/otr-reset-tool\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/YourInControlOpti2.jpg?v=1571858633\" style=\"max-width: 300px;\" alt=\"reset tool\"><\/a>\n<h3 class=\"mb-2\"> OTR Reset Tool <\/h3>\n<p>Stand alone device. Send commands via timed delay. No buttons, screen or complicated menus.<\/p> \n<a href=\"https:\/\/otrperformance.com\/pages\/otr-reset-tool\"><button class=\"mt-2 btn-otr\">Learn about OTR Reset Tool<\/button><\/a>\n<\/div>",
+              "width": "50%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "21790545-0dea-44e0-af7d-33851c3b556f",
+          "160555462062599b95-0",
+          "32e6d186-3477-4615-89ab-de409af7501c",
+          "095c54bf-b81a-47d7-9076-8afde13804eb",
+          "fe614953-60f8-4490-b34b-4830b88534fc"
+        ],
+        "settings": {
+        }
+      },
+      "16061660640dcecc4b": {
+        "type": "advanced-content",
+        "blocks": {
+          "16061660640dcecc4b-0": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"text-center\">\n<img data-src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/MoneyBack-Guarnatee_60_Day.png?v=1616613607\" class=\"lazyload\" style=\"max-width: 100px;\" alt=\"60dayguarantee\">\n            <h2 class=\"mb-2 mt-2\">60-Day Guarantee<\/h2>\n            <p style=\"font-size: 12px;\">We get it, you don’t know us very well yet. That’s why our products comes with a 60-day, no-hassle, money-back guarantee. If they don't fit your needs for any reason, just let us know within 60 days, and we’ll refund 100% of your purchase price. We’ve got your back.<\/p>\n<\/div>",
+              "width": "50%",
+              "alignment": "center"
+            }
+          },
+          "f342b182-47d6-4e59-bfca-9b3b8f531039": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"text-center\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/MoneyBack-Guarnatee_USA.png?v=1583943641\" class=\"lazyload\" style=\"max-width: 100px;\" alt=\"usasupport\">\n            <h2 class=\"mb-2 mt-2\">USA Support<\/h2>\n            <p style=\"font-size: 12px;\">Located in Detroit MI, (EST). A truly committed team of trained experts that are there to assist with any customer service, technical support or general questions you may have. No bots. Real help from real people, when you need us! Contact us via phone, chat, or email anytime.<\/p>\n<\/div>",
+              "width": "50%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "16061660640dcecc4b-0",
+          "f342b182-47d6-4e59-bfca-9b3b8f531039"
+        ],
+        "settings": {
+        }
+      },
+      "161851072483c08fb6": {
+        "type": "advanced-content",
+        "blocks": {
+          "161851072483c08fb6-0": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"container section\">\n    <div class=\"how-it-works\">\n        <h3 class=\"mb-0 text-center text-white\">How OTR Diagnostics Works<\/h3>\n        <p class=\"text-center\">Set up in a few simple steps.<\/p>\n        <div class=\"row text-white\">\n            <div class=\"col-md-3 col-sm-12\">\n                <div class=\"text-center mb-4\"> <img data-src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Main.png?v=1646839748\" class=\"img-thumbnail rounded-circle ls-is-cached lazyloaded\" style=\"max-height: 175px;\" alt=\"subscriptions\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Main.png?v=1646839748\">\n                    <h4 class=\"text-white mt-2 mb-1\">Step 1<\/h4>\n                    <p>Select Subscription Plan, Diagnostic Adapter For Your Engine<\/p>\n                <\/div>\n            <\/div>\n            <div class=\"col-md-3 col-sm-12\">\n                <div class=\"text-center mb-4\"> <img data-src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/OTRLinkWebImage.jpg?v=1607456754\" class=\"img-thumbnail rounded-circle lazyloaded\" style=\"max-height: 175px;\" alt=\"adapterconnect\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/OTRLinkWebImage.jpg?v=1607456754\">\n                    <h4 class=\"text-white mt-2 mb-1\">Step 2<\/h4>\n                    <p>Connect Adapter To Vehicle Diagnostic Plug<\/p>\n                <\/div>\n            <\/div>\n            <div class=\"col-md-3 col-sm-12\">\n                <div class=\"text-center mb-4\"> <img data-src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Dx-App.jpg?v=1607457627\" class=\"img-thumbnail rounded-circle lazyloaded\" style=\"max-height: 175px;\" alt=\"app\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Dx-App.jpg?v=1607457627\">\n                    <h4 class=\"text-white mt-2 mb-1\">Step 3<\/h4>\n                    <p>Download OTR Diagnostics App For Your Mobile Device<\/p>\n                <\/div>\n            <\/div>\n            <div class=\"col-md-3 col-sm-12\">\n                <div class=\"text-center mb-4\"> <img data-src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/IMG_7355_1.png?v=1646840874\" class=\"img-thumbnail rounded-circle ls-is-cached lazyloaded\" style=\"max-height: 175px;\" alt=\"command\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/IMG_7355_1.png?v=1646840874\">\n                    <h4 class=\"text-white mt-2 mb-1\">Step 4<\/h4>\n                    <p>Begin Using OTR Diagnostics App<\/p>\n                <\/div>\n            <\/div>\n        <\/div>\n    <\/div>\n<\/div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "161851072483c08fb6-0"
+        ],
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "info-collections-template": {
+        "type": "info-collections-template",
+        "blocks": {
+          "c46fd199-01d1-491b-bcbf-1f9aca98bda2": {
+            "type": "collection",
+            "settings": {
+              "collection": "diagnostic-packages"
+            }
+          },
+          "3a58323b-f3dc-4135-974d-d723b4e8bb89": {
+            "type": "collection",
+            "settings": {
+              "collection": "reset-tools"
+            }
+          },
+          "0b24c42b-3d89-4168-a2eb-eec8a1353146": {
+            "type": "collection",
+            "settings": {
+              "collection": "off-highway"
+            }
+          }
+        },
+        "block_order": [
+          "c46fd199-01d1-491b-bcbf-1f9aca98bda2",
+          "3a58323b-f3dc-4135-974d-d723b4e8bb89",
+          "0b24c42b-3d89-4168-a2eb-eec8a1353146"
+        ],
+        "settings": {
+          "display_type": "selected",
+          "sort": "alphabetical"
+        }
+      },
+      "1648736409cc017703": {
+        "type": "featured-blog",
+        "disabled": true,
+        "settings": {
+          "title": "Company News",
+          "blog": "news",
+          "post_limit": 3,
+          "blog_show_date": true,
+          "blog_show_author": false,
+          "blog_show_image": true,
+          "blog_show_excerpt": false,
+          "show_view_all": false
+        }
+      },
+      "1661991000735bee2c": {
+        "type": "featured-row",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/OTR_Diagnostics_v2.jpg",
+          "layout": "left",
+          "title": "OTR Diagnostics goes beyond your typical hand held scan tool.",
+          "text": "<p>OTR Diagnostics gives you access to vital information about fault codes, their causes and more. These details rival advanced dealership software, far exceeding your average handheld scan tool.<\/p>",
+          "button_label": "Shop Diagnostics",
+          "button_link": "shopify:\/\/products\/otr-diagnostics-professional-package"
+        }
+      },
+      "1744c436-9f07-4e13-ac53-f658ee7c2e20": {
+        "type": "featured-row",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/OTR_Diagnostics_v2.jpg",
+          "layout": "left",
+          "title": "Frustrated with constant lights, codes, and derates?",
+          "text": "<p>OTR's easy-to-use tools get you back on the road fast. <\/p>",
+          "button_label": "Learn More",
+          "button_link": "shopify:\/\/pages\/otrdiagnostics"
+        }
+      },
+      "25660b69-2d30-456c-b6e4-035f50a86c5c": {
+        "type": "featured-content",
+        "settings": {
+          "home_page_full_width": true,
+          "section_title": "Drive with Peace of Mind",
+          "text": "<p>Join over 20,000 people from owner-operators to fleets that use OTR products to troubleshoot, clear derates and keep their operations running smoothly.<\/p>",
+          "text_size": "large"
+        }
+      },
+      "a84c21a6-527f-4915-92ad-513a9980c943": {
+        "type": "featured-video",
+        "settings": {
+          "heading": "",
+          "video_url": "https:\/\/www.youtube.com\/watch?v=bmPQiEiih9s"
+        }
+      },
+      "98244b1d-8929-4366-96a8-6aa2cd6d99a9": {
+        "type": "featured-row",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/YourInControl_dd5a8121-f089-4442-a5cb-dd1fff6d6b04.png",
+          "layout": "left",
+          "title": "Limited time only! Take $100 OFF OTR Reset Tools.",
+          "text": "<p>Automatic Discount applied at checkout! <\/p>",
+          "button_label": "Learn More",
+          "button_link": "shopify:\/\/collections\/reset-tools"
+        }
+      },
+      "37a4ca19-96b8-4601-a9e6-05ce3362c648": {
+        "type": "featured-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/OTR_Performance_Location.jpg",
+          "layout": "left",
+          "title": "OTR Headquarters",
+          "text": "<p><strong>OTR Performance® Inc.<\/strong><br\/>51619 Industrial Rd. <br\/>Macomb, Michigan, 48042<br\/>USA<\/p><p><strong>HOURS<\/strong><\/p><p>Monday - Friday: 8am - 5pm, EST<br\/>Saturday: Closed<br\/>Sunday: Closed<\/p><p><strong>📞 <\/strong><a href=\"tel:+15867994375\"><strong>(586) 799-4375<\/strong><\/a><\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "e7f00885-5cb3-4c9f-a4e3-bf94bcd90e14": {
+        "type": "advanced-content",
+        "blocks": {
+          "e7f00885-5cb3-4c9f-a4e3-bf94bcd90e14-16662888988ec00cb4-0": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"text-align:center;\">\n<h3>Stop Worrying About What’ll Happen Next!\n<\/h3>OTR’s tools can greatly reduce your chances of losing a load, big repair bills, or your need for a tow.\n<\/div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "e7f00885-5cb3-4c9f-a4e3-bf94bcd90e14-16662888988ec00cb4-0"
+        ],
+        "settings": {
+        }
+      },
+      "415c3813-1990-4f09-a738-a8fb25765740": {
+        "type": "advanced-content",
+        "blocks": {
+          "415c3813-1990-4f09-a738-a8fb25765740-166629261485e7b5b0-0": {
+            "type": "html",
+            "settings": {
+              "code": "<p><\/p><div class=\"text-center\">\n<a href=\"https:\/\/otrperformance.com\/collections\/reset-tools\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2628\/2624\/files\/Group_284_1.png?v=1666299572\" alt=\"Reset tool \"><\/a>\n<\/div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "415c3813-1990-4f09-a738-a8fb25765740-166629261485e7b5b0-0"
+        ],
+        "settings": {
+        }
+      },
+      "98395288-0446-43c5-989c-f854b7142ed4": {
+        "type": "featured-video",
+        "settings": {
+          "heading": "",
+          "video_url": "https:\/\/www.youtube.com\/watch?v=jZZjKghA4VU"
+        }
+      },
+      "906a189b-8b52-4768-bf41-71a5d4046556": {
+        "type": "featured-video",
+        "settings": {
+          "heading": "",
+          "video_url": "https:\/\/www.youtube.com\/watch?v=-KOfZ-yp_h8"
+        }
+      },
+      "bundle-collection-template": {
+        "type": "bundle-collection-template",
+        "settings": {
+          "show_collection_image": false,
+          "collection_sort_enable": false,
+          "collection_tags_enable": false,
+          "collection_products_grid": "grid",
+          "product_vendor_enable": false
+        }
+      },
+      "banner-section": {
+        "type": "banner-section",
+        "custom_css": [
+
+        ],
+        "settings": {
+          "enable_section": true,
+          "banner_text_color": "#ffffff",
+          "title": "Take Control of Your Truck Maintenance",
+          "description": "\"My experience using OTR Diagnostics is wonderful. Knowing that I can find out why my check engine light is on and not taking my truck to the shop is definitely a money saver.\" - Clifford S.",
+          "terms": "Limited time. While supplies last. Cannot be combined with any other offer. Applies to new OTR Diagnostics subscription only.",
+          "background_image": "shopify:\/\/shop_images\/Background_Banner2.jpg",
+          "heading_image": "shopify:\/\/shop_images\/5-stars.svg",
+          "button_url": "shopify:\/\/products\/otr-diagnostics-professional-package",
+          "button_text": "Claim FREE Hardware"
+        }
+      },
+      "news-banner": {
+        "type": "news-banner",
+        "settings": {
+          "enable_section": true,
+          "banner_gradient_start": "#c6a545",
+          "banner_gradient_end": "#c6a545",
+          "banner_text_color": "#ffffff",
+          "banner_description": "Join us at the California Trucking Show | October 14 & 15th | Booth #1002",
+          "banner_link_url": "",
+          "banner_link_text": ""
+        }
+      },
+      "collection-sales-template": {
+        "type": "collection-sales-template",
+        "settings": {
+          "show_collection_image": false,
+          "collection_sort_enable": false,
+          "collection_tags_enable": false,
+          "collection_products_grid": "collage",
+          "product_vendor_enable": false
+        }
+      }
+    },
+    "content_for_index": [
+      "25660b69-2d30-456c-b6e4-035f50a86c5c",
+      "1744c436-9f07-4e13-ac53-f658ee7c2e20",
+      "slideshow",
+      "98244b1d-8929-4366-96a8-6aa2cd6d99a9",
+      "98395288-0446-43c5-989c-f854b7142ed4",
+      "160555462062599b95",
+      "a84c21a6-527f-4915-92ad-513a9980c943",
+      "e7f00885-5cb3-4c9f-a4e3-bf94bcd90e14",
+      "1661991000735bee2c",
+      "161851072483c08fb6",
+      "1594669060962",
+      "906a189b-8b52-4768-bf41-71a5d4046556",
+      "415c3813-1990-4f09-a738-a8fb25765740",
+      "featured-products",
+      "1581435567333",
+      "1648736409cc017703",
+      "16061660640dcecc4b",
+      "37a4ca19-96b8-4601-a9e6-05ce3362c648"
+    ],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "6897698614501909729": {
+        "type": "shopify:\/\/apps\/superspeed-googles-page-speed\/blocks\/app-embed\/ea1b2c2c-4644-44b9-b10b-fdb914884a8c",
+        "disabled": false,
+        "settings": {
+          "optimization_level": "extreme"
+        }
+      },
+      "5149645339031002760": {
+        "type": "shopify:\/\/apps\/order-limits-minmaxify\/blocks\/app-embed-block\/3acfba32-89f3-4377-ae20-cbb9abc48475",
+        "disabled": false,
+        "settings": {
+          "async": false
+        }
+      },
+      "11432920177897217407": {
+        "type": "shopify:\/\/apps\/epa-easy-product-addons\/blocks\/speedup_link\/0099190e-a0cb-49e7-8d26-026c9d26f337",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "17151115064775110295": {
+        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
+        "disabled": false,
+        "settings": {
+          "color_brand": "#339933",
+          "contrast_color": "#ffffff",
+          "color_brand_secondary": "#339933",
+          "corners": "8px",
+          "app_background": "#ffffff",
+          "app_container": 1200,
+          "app_vertical_padding": 0,
+          "images_aspect_ratio": "1",
+          "cards_background": "#ffffff",
+          "cards_border_color": "#787878"
+        }
+      },
+      "17592058902588436946": {
+        "type": "shopify:\/\/apps\/c-year-make-model-search\/blocks\/app-embed-ymm-basic-script\/ce35ea35-ef50-4f43-8cb6-7c34cae4c285",
+        "disabled": false,
+        "settings": {
+          "searchbox_title": "Search By Year, Make and Model",
+          "search_button": "Search",
+          "reset_button": "Reset",
+          "select_label": "Select",
+          "none_txt": "None",
+          "ymm_searchbox_use": true,
+          "products_limit": "20",
+          "img_dimension": "240x240",
+          "show_sku": false,
+          "show_vendor": false,
+          "product_pagetitle": "Products Result",
+          "products": "Products",
+          "product": "Product",
+          "no_results": "There are No Products found.",
+          "sale_lbl": "Sale",
+          "soldout_lbl": "Soldout",
+          "ymm_custom_css": ""
+        }
+      }
+    }
+  },
+  "presets": {
+    "Classic": {
+      "cart_type": "page",
+      "cart_notes_enable": false,
+      "checkout_accent_color": "#a26b25",
+      "checkout_banner_background_color": "#fff",
+      "checkout_button_color": "#000000",
+      "checkout_call_to_action_color": "#a26b25",
+      "checkout_use_header_image": false,
+      "collection_products_grid": "collage",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#222323",
+      "color_borders": "#1c1d1d",
+      "color_button_text": "#ffffff",
+      "color_drawer_background": "#1c1d1d",
+      "color_drawer_border": "#343535",
+      "color_drawer_button": "#a26b25",
+      "color_drawer_button_text": "#ffffff",
+      "color_drawer_text": "#ffffff",
+      "color_headings": "#222323",
+      "color_input": "#f6f6f6",
+      "color_newsletter": "#f6f6f6",
+      "color_primary": "#1c1d1d",
+      "color_product_background": "#f7f7f7",
+      "color_sale_tag": "#990000",
+      "color_secondary": "#a26b25",
+      "customer_layout": "customer_area",
+      "favicon_enable": false,
+      "product_vendor_enable": false,
+      "share_facebook": true,
+      "share_pinterest": true,
+      "share_twitter": true,
+      "social_sharing_style": "clean",
+      "type_accent_family": "montserrat_n6",
+      "type_accent_spacing": true,
+      "type_accent_transform": true,
+      "type_accent_subheadings": true,
+      "type_base_family": "arapey_n4",
+      "type_base_italize_titles": true,
+      "type_base_size": "16px",
+      "type_header_base_size": "30px",
+      "type_header_border_thickness": "1px",
+      "type_header_family": "old_standard_tt_n4",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "show_announcement": true,
+            "color_bg": "#1c1d1d",
+            "color_text": "#ffffff"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "slide",
+              "settings": {
+              }
+            },
+            "slideshow-1": {
+              "type": "slide",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {
+          }
+        },
+        "featured-products": {
+          "type": "featured-products",
+          "settings": {
+            "home_featured_products": "frontpage"
+          }
+        },
+        "featured-content": {
+          "type": "featured-content",
+          "settings": {
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collections-0": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "featured-collections-1": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "featured-collections-2": {
+              "type": "collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "featured-collections-0",
+            "featured-collections-1",
+            "featured-collections-2"
+          ],
+          "settings": {
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "featured-content",
+        "featured-collections",
+        "featured-products",
+        "newsletter"
+      ]
+    },
+    "Playful": {
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#565656",
+      "color_borders": "#5dd2b4",
+      "color_button_text": "#ffffff",
+      "color_primary": "#7737BD",
+      "color_secondary": "#058677",
+      "color_product_background": "#fff4f6",
+      "color_sale_tag": "#e80970",
+      "color_input": "#f6f6f6",
+      "color_newsletter": "#bde9f2",
+      "color_drawer_background": "#360f5f",
+      "color_drawer_text": "#ffffff",
+      "color_drawer_border": "#50297a",
+      "color_drawer_button": "#7737BD",
+      "color_drawer_button_text": "#ffffff",
+      "color_headings": "#321863",
+      "type_header_family": "quicksand_n7",
+      "type_header_base_size": "38px",
+      "type_header_border_thickness": "1px",
+      "type_accent_family": "roboto_n7",
+      "type_accent_transform": true,
+      "type_accent_spacing": true,
+      "type_accent_subheadings": false,
+      "type_base_family": "helvetica_n4",
+      "type_base_size": "17px",
+      "type_base_italize_titles": false,
+      "cart_type": "page",
+      "cart_notes_enable": true,
+      "social_facebook_link": "",
+      "social_twitter_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_snapchat_link": "",
+      "social_google_plus_link": "",
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "social_fancy_link": "",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fff4f6",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Roboto",
+      "checkout_accent_color": "#7737BD",
+      "checkout_button_color": "#7737BD",
+      "checkout_error_color": "#f01130",
+      "checkout_banner_background_color": "#fff",
+      "checkout_call_to_action_color": "#a26b25",
+      "checkout_use_header_image": false,
+      "collection_products_grid": "collage",
+      "customer_layout": "customer_area",
+      "favicon_enable": false,
+      "product_vendor_enable": false,
+      "social_sharing_style": "clean",
+      "sections": {
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "1495823280244": {
+              "type": "slide",
+              "settings": {
+                "slide_text_color": "#ffffff",
+                "slide_button_label_color": "#003B34",
+                "slide_button_background_color": "#84D1B2"
+              }
+            }
+          },
+          "block_order": [
+            "1495823280244"
+          ],
+          "settings": {
+            "hero_home_auto": false,
+            "home_hero_auto_speed": 5
+          }
+        },
+        "featured-products": {
+          "type": "featured-products",
+          "settings": {
+            "home_featured_products": "frontpage",
+            "collection_products_grid": "collage"
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_max_width": 260,
+            "search": "modal",
+            "main_menu_link_list": "main-menu",
+            "show_announcement": false,
+            "color_bg": "#290c49",
+            "color_text": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "settings": {
+            "footer_link_list": "footer"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "collection_tags_enable": false,
+            "collection_products_grid": "grid",
+            "product_vendor_enable": false
+          }
+        },
+        "1494860348200": {
+          "type": "featured-row",
+          "settings": {
+            "layout": "right"
+          }
+        },
+        "1494894035034": {
+          "type": "featured-row",
+          "settings": {
+            "layout": "left"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "zoom_enable": false,
+            "social_sharing_products": true,
+            "product_vendor_enable": false
+          }
+        },
+        "1496078102297": {
+          "type": "advanced-content",
+          "blocks": {
+            "1496078102297-0": {
+              "type": "html",
+              "settings": {
+                "code": "<div style=\"text-align:center;\">\n<h1 class=\"h1\">Use HTML to format your text so it can be easily read.<\/h1>This text can be used to share information about your brand with customers.<\/div>",
+                "width": "100%",
+                "alignment": "top-middle"
+              }
+            }
+          },
+          "block_order": [
+            "1496078102297-0"
+          ],
+          "settings": {
+          }
+        },
+        "1496177901425": {
+          "type": "advanced-content",
+          "blocks": {
+            "1496177901425-0": {
+              "type": "html",
+              "settings": {
+                "code": "<div style=\"width:745px;text-align: center; margin: 0 auto;\">This text can be used to share information about your brand with customers.<\/div>",
+                "width": "100%",
+                "alignment": "top-middle"
+              }
+            }
+          },
+          "block_order": [
+            "1496177901425-0"
+          ],
+          "settings": {
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "1496177901425",
+        "featured-products",
+        "newsletter",
+        "1496078102297",
+        "1494860348200",
+        "1494894035034"
+      ]
+    }
+  }
+}
