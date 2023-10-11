@@ -48,7 +48,7 @@
 {% endschema %}
 
 {% if section.settings.enable_section %}
-<div class="wrapper">
+<div class="wrapper" style="padding-left: 0px; padding-right: 0px;">
 <section class="banner mb-3 pt-2 pb-2" style="background: linear-gradient(to right, {{ section.settings.banner_gradient_start }}, {{ section.settings.banner_gradient_end }}); border-radius: 15px;">
   <div class="banner-description" style="color: {{ section.settings.banner_text_color }};">
     <p class="text-center  ml-2 mr-2" style="margin-bottom: 0px; font-size: 14px; font-weight: 600;"> {{ section.settings.banner_description }}  <a class="text-center badge badge-light" style="color: #339933;" href="{{ section.settings.banner_link_url }}" >{{ section.settings.banner_link_text }}</a></p>
