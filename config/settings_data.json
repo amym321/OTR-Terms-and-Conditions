@@ -590,7 +590,7 @@
       "news-banner": {
         "type": "news-banner",
         "settings": {
-          "enable_section": true,
+          "enable_section": false,
           "banner_gradient_start": "#ff7300",
           "banner_gradient_end": "#ff7300",
           "banner_text_color": "#ffffff",
@@ -671,29 +671,6 @@
           "images_aspect_ratio": "1",
           "cards_background": "#ffffff",
           "cards_border_color": "#787878"
-        }
-      },
-      "17592058902588436946": {
-        "type": "shopify:\/\/apps\/c-year-make-model-search\/blocks\/app-embed-ymm-basic-script\/ce35ea35-ef50-4f43-8cb6-7c34cae4c285",
-        "disabled": false,
-        "settings": {
-          "searchbox_title": "Search By Year, Make and Model",
-          "search_button": "Search",
-          "reset_button": "Reset",
-          "select_label": "Select",
-          "none_txt": "None",
-          "ymm_searchbox_use": true,
-          "products_limit": "20",
-          "img_dimension": "240x240",
-          "show_sku": false,
-          "show_vendor": false,
-          "product_pagetitle": "Products Result",
-          "products": "Products",
-          "product": "Product",
-          "no_results": "There are No Products found.",
-          "sale_lbl": "Sale",
-          "soldout_lbl": "Soldout",
-          "ymm_custom_css": ""
         }
       }
     }
