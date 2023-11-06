@@ -2,13 +2,13 @@
 
 
   {% if template != 'cart' %}
-    {% if template != 'tradeshow' %}
     <div class="klaviyo-form-SenkRB mb-5" style="background-color: #33993310"></div>
+    {% unless template == 'tradeshow' %}
+  <div class="padding" style="padding: 25px;"></div>
+{% endunless %}
   {% else %}
-      
     <div class="padding" style="padding: 25px;"></div>
   {% endif %}
-     {% endif %}
   
 
   <div class="wrapper">
