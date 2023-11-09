@@ -590,13 +590,13 @@
       "news-banner": {
         "type": "news-banner",
         "settings": {
-          "enable_section": false,
-          "banner_gradient_start": "#ff7300",
-          "banner_gradient_end": "#ff7300",
+          "enable_section": true,
+          "banner_gradient_start": "#787878",
+          "banner_gradient_end": "#787878",
           "banner_text_color": "#ffffff",
-          "banner_description": "Join us at the California Trucking Show | October 14th & 15th | Ontario, CA | Booth #1002",
-          "banner_link_url": "https:\/\/californiatruckingshow.com\/",
-          "banner_link_text": "Learn More"
+          "banner_description": "Are you OTR Diagnostics Compatible?",
+          "banner_link_url": "shopify:\/\/pages\/are-you-otr-diagnostics-compatible-take-the-quiz",
+          "banner_link_text": "Take the quiz"
         }
       },
       "collection-sales-template": {
