@@ -206,9 +206,10 @@ if (window.location.href == "https://otrperformance.com/blogs/faq") {
         {% unless request.page_type == "index" %}
           <div class="wrapper">
         {% endunless %}
+    
       {% if template != 'product' %}
-  {% section 'news-banner' %}
-{% endif %}
+        {% section 'news-banner' %}
+      {% endif %}
 
           {{ content_for_layout }}
         {% unless request.page_type == "index" %}
