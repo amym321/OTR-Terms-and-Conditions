@@ -230,6 +230,10 @@
         {% if product.type == 'Diagnostic Tool' %}
           {% include '60day' %}
         {% endif %}
+
+        {% if product.type == 'Dx Bundle' %}
+          {% include '60dayDx' %}
+        {% endif %}
         
       </div>
 
